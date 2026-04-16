@@ -48,14 +48,10 @@
 
     <main id="main">
         <h1><span class="step-num">2</span> Constants</h1>
-        <p class="lead">Quantum chemistry works in atomic units: Bohr for lengths, Hartree for energies.</p>
-
-        <p class="lead">Every conversion comes from <strong>CODATA 2022</strong> — the most recent recommended values — so every number printed traces back to a primary reference.</p>
+        <p class="lead">RustQuantum works in atomic units.</p>
 
         <details class="collapse">
         <summary><h2 id="bohr-radius">Bohr Radius</h2></summary>
-
-        <p>RustQuantum verified against PySCF.</p>
 
         <h3>Primary constant</h3>
         <div class="table-wrap">
@@ -182,8 +178,6 @@
         <details class="collapse">
         <summary><h2 id="energy-conversions">Energy Conversions</h2></summary>
 
-        <p>RustQuantum verified against PySCF.</p>
-
         <h3>Sole measured constant</h3>
         <div class="table-wrap">
         <table>
@@ -198,7 +192,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr><td><strong>HARTREE_TO_JOULE</strong></td> <td class="mono">J/Ha</td> <td class="mono">4.359744722206000e-18</td> <td class="mono">4.359744644911914e-18</td> <td class="mono">+7.7e-26</td> <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td><strong>Hartree to joule</strong></td> <td class="mono">J/Ha</td> <td class="mono">4.359744722206000e-18</td> <td class="mono">4.359744644911914e-18</td> <td class="mono">+7.7e-26</td> <td><span class="badge badge-ok">Near</span></td></tr>
             </tbody>
         </table>
         </div>
@@ -217,8 +211,8 @@
                 </tr>
             </thead>
             <tbody>
-                <tr><td><strong>HARTREE_TO_EV</strong></td>     <td class="mono">eV/Ha</td>   <td class="mono">27.211386245981</td> <td class="mono">27.211386020000</td> <td class="mono">+2.3e-7</td> <td><span class="badge badge-ok">Near</span></td></tr>
-                <tr><td><strong>HARTREE_TO_CM_INV</strong></td> <td class="mono">cm⁻¹/Ha</td> <td class="mono">219474.631363</td>  <td class="mono">219474.631116</td>  <td class="mono">+2.5e-4</td> <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td><strong>Hartree to eV</strong></td>     <td class="mono">eV/Ha</td>   <td class="mono">27.211386245981</td> <td class="mono">27.211386020000</td> <td class="mono">+2.3e-7</td> <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td><strong>Hartree to cm⁻¹</strong></td> <td class="mono">cm⁻¹/Ha</td> <td class="mono">219474.631363</td>  <td class="mono">219474.631116</td>  <td class="mono">+2.5e-4</td> <td><span class="badge badge-ok">Near</span></td></tr>
             </tbody>
         </table>
         </div>
@@ -237,10 +231,10 @@
                 </tr>
             </thead>
             <tbody>
-                <tr><td><strong>HARTREE_TO_KJ_MOL</strong></td>   <td class="mono">kJ/mol/Ha</td>   <td class="mono">2625.4996394792</td> <td class="mono">2625.4995929316</td> <td class="mono">+4.7e-5</td> <td><span class="badge badge-ok">Near</span></td></tr>
-                <tr><td><strong>HARTREE_TO_KCAL_MOL</strong></td> <td class="mono">kcal/mol/Ha</td> <td class="mono">627.5094740629</td>  <td class="mono">627.5094629378</td>  <td class="mono">+1.1e-5</td> <td><span class="badge badge-ok">Near</span></td></tr>
-                <tr><td><strong>HARTREE_TO_HZ</strong></td>       <td class="mono">Hz/Ha</td>       <td class="mono">6.5796839205e15</td> <td class="mono">6.5796838038e15</td> <td class="mono">+1.2e+8</td> <td><span class="badge badge-ok">Near</span></td></tr>
-                <tr><td><strong>HARTREE_TO_KELVIN</strong></td>   <td class="mono">K/Ha</td>        <td class="mono">315775.02480399</td> <td class="mono">315775.01920560</td> <td class="mono">+5.6e-3</td> <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td><strong>Hartree to kJ/mol</strong></td>   <td class="mono">kJ/mol/Ha</td>   <td class="mono">2625.4996394792</td> <td class="mono">2625.4995929316</td> <td class="mono">+4.7e-5</td> <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td><strong>Hartree to kcal/mol</strong></td> <td class="mono">kcal/mol/Ha</td> <td class="mono">627.5094740629</td>  <td class="mono">627.5094629378</td>  <td class="mono">+1.1e-5</td> <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td><strong>Hartree to Hz</strong></td>       <td class="mono">Hz/Ha</td>       <td class="mono">6.5796839205e15</td> <td class="mono">6.5796838038e15</td> <td class="mono">+1.2e+8</td> <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td><strong>Hartree to kelvin</strong></td>   <td class="mono">K/Ha</td>        <td class="mono">315775.02480399</td> <td class="mono">315775.01920560</td> <td class="mono">+5.6e-3</td> <td><span class="badge badge-ok">Near</span></td></tr>
             </tbody>
         </table>
         </div>
@@ -259,9 +253,12 @@
                 </tr>
             </thead>
             <tbody>
-                <tr><td><strong>EV_TO_HARTREE</strong></td>       <td class="mono">Ha/eV</td>         <td class="mono">3.6749322175664220e-2</td> <td class="mono">3.6749322480854656e-2</td> <td class="mono">−3.1e-10</td> <td><span class="badge badge-ok">Near</span></td></tr>
-                <tr><td><strong>KCAL_MOL_TO_HARTREE</strong></td> <td class="mono">Ha/(kcal/mol)</td> <td class="mono">1.5936014376410300e-3</td> <td class="mono">1.5936014658940536e-3</td> <td class="mono">−2.8e-11</td> <td><span class="badge badge-ok">Near</span></td></tr>
-                <tr><td><strong>KJ_MOL_TO_HARTREE</strong></td>   <td class="mono">Ha/(kJ/mol)</td>   <td class="mono">3.8087988471343932e-4</td> <td class="mono">3.8087989146607396e-4</td> <td class="mono">−6.8e-12</td> <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td><strong>eV to Hartree</strong></td>       <td class="mono">Ha/eV</td>         <td class="mono">3.6749322175664220e-2</td> <td class="mono">3.6749322480854656e-2</td> <td class="mono">−3.1e-10</td> <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td><strong>kcal/mol to Hartree</strong></td> <td class="mono">Ha/(kcal/mol)</td> <td class="mono">1.5936014376410300e-3</td> <td class="mono">1.5936014658940536e-3</td> <td class="mono">−2.8e-11</td> <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td><strong>kJ/mol to Hartree</strong></td>   <td class="mono">Ha/(kJ/mol)</td>   <td class="mono">3.8087988471343932e-4</td> <td class="mono">3.8087989146607396e-4</td> <td class="mono">−6.8e-12</td> <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td><strong>cm⁻¹ to Hartree</strong></td>   <td class="mono">Ha/cm⁻¹</td>       <td class="mono">4.5563352529131594e-6</td> <td class="mono">4.5563352580524657e-6</td> <td class="mono">−5.1e-15</td> <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td><strong>Hz to Hartree</strong></td>       <td class="mono">Ha/Hz</td>         <td class="mono">1.5198298460574212e-16</td> <td class="mono">1.5198298730025451e-16</td> <td class="mono">−2.7e-24</td> <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td><strong>Kelvin to Hartree</strong></td>   <td class="mono">Ha/K</td>          <td class="mono">3.1668115634564072e-6</td> <td class="mono">3.1668116196009350e-6</td> <td class="mono">−5.6e-14</td> <td><span class="badge badge-ok">Near</span></td></tr>
             </tbody>
         </table>
         </div>
@@ -280,7 +277,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr><td><strong>CHEMICAL_ACCURACY_HARTREE</strong></td> <td class="mono">Ha</td> <td class="mono">0.00159360143764</td> <td class="mono">0.00159360146589</td> <td class="mono">−2.8e-11</td> <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td><strong>Chemical accuracy</strong></td> <td class="mono">Ha</td> <td class="mono">0.00159360143764</td> <td class="mono">0.00159360146589</td> <td class="mono">−2.8e-11</td> <td><span class="badge badge-ok">Near</span></td></tr>
             </tbody>
         </table>
         </div>
@@ -303,6 +300,9 @@
                 <tr><td class="mono">eV</td>       <td class="mono">27.2113862460</td>  <td class="mono">27.2113860200</td>  <td class="mono">+2.3e-7</td> <td><span class="badge badge-ok">Near</span></td></tr>
                 <tr><td class="mono">kcal/mol</td> <td class="mono">627.5094740629</td> <td class="mono">627.5094629378</td> <td class="mono">+1.1e-5</td> <td><span class="badge badge-ok">Near</span></td></tr>
                 <tr><td class="mono">kJ/mol</td>   <td class="mono">2625.4996394792</td> <td class="mono">2625.4995929316</td> <td class="mono">+4.7e-5</td> <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td class="mono">cm⁻¹</td>     <td class="mono">219474.631363</td>  <td class="mono">219474.631116</td>  <td class="mono">+2.5e-4</td> <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td class="mono">Hz</td>       <td class="mono">6.5796839205e15</td> <td class="mono">6.5796838038e15</td> <td class="mono">+1.2e+8</td> <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td class="mono">K</td>        <td class="mono">315775.02480399</td> <td class="mono">315775.01920560</td> <td class="mono">+5.6e-3</td> <td><span class="badge badge-ok">Near</span></td></tr>
             </tbody>
         </table>
         </div>
@@ -323,6 +323,9 @@
                 <tr><td class="mono">eV</td>       <td class="mono">−27.2113862460</td>  <td class="mono">−27.2113860200</td>  <td class="mono">−2.3e-7</td> <td><span class="badge badge-ok">Near</span></td></tr>
                 <tr><td class="mono">kcal/mol</td> <td class="mono">−627.5094740629</td> <td class="mono">−627.5094629378</td> <td class="mono">−1.1e-5</td> <td><span class="badge badge-ok">Near</span></td></tr>
                 <tr><td class="mono">kJ/mol</td>   <td class="mono">−2625.4996394792</td> <td class="mono">−2625.4995929316</td> <td class="mono">−4.7e-5</td> <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td class="mono">cm⁻¹</td>     <td class="mono">−219474.631363</td>  <td class="mono">−219474.631116</td>  <td class="mono">−2.5e-4</td> <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td class="mono">Hz</td>       <td class="mono">−6.5796839205e15</td> <td class="mono">−6.5796838038e15</td> <td class="mono">−1.2e+8</td> <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td class="mono">K</td>        <td class="mono">−315775.02480399</td> <td class="mono">−315775.01920560</td> <td class="mono">−5.6e-3</td> <td><span class="badge badge-ok">Near</span></td></tr>
             </tbody>
         </table>
         </div>
@@ -343,6 +346,9 @@
                 <tr><td class="mono">eV</td>       <td class="mono">−2041.2005326638</td>   <td class="mono">−2041.2005157124</td>   <td class="mono">−1.7e-5</td> <td><span class="badge badge-ok">Near</span></td></tr>
                 <tr><td class="mono">kcal/mol</td> <td class="mono">−47071.2025153790</td>  <td class="mono">−47071.2016808518</td>  <td class="mono">−8.3e-4</td> <td><span class="badge badge-ok">Near</span></td></tr>
                 <tr><td class="mono">kJ/mol</td>   <td class="mono">−196945.9113243456</td> <td class="mono">−196945.9078326838</td> <td class="mono">−3.5e-3</td> <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td class="mono">cm⁻¹</td>     <td class="mono">−16463392.581141</td>   <td class="mono">−16463392.562571</td>   <td class="mono">−1.9e-2</td> <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td class="mono">Hz</td>       <td class="mono">−4.9356009289e17</td>   <td class="mono">−4.9356008414e17</td>   <td class="mono">−8.8e10</td> <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td class="mono">K</td>        <td class="mono">−23687148.57101493</td>  <td class="mono">−23687148.15106454</td>  <td class="mono">−4.2e-1</td> <td><span class="badge badge-ok">Near</span></td></tr>
             </tbody>
         </table>
         </div>
@@ -363,6 +369,9 @@
                 <tr><td class="mono">eV</td>       <td class="mono">0.0272113862</td> <td class="mono">0.0272113860</td> <td class="mono">+2.3e-10</td> <td><span class="badge badge-ok">Near</span></td></tr>
                 <tr><td class="mono">kcal/mol</td> <td class="mono">0.6275094741</td> <td class="mono">0.6275094629</td> <td class="mono">+1.1e-8</td>  <td><span class="badge badge-ok">Near</span></td></tr>
                 <tr><td class="mono">kJ/mol</td>   <td class="mono">2.6254996395</td> <td class="mono">2.6254995929</td> <td class="mono">+4.7e-8</td>  <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td class="mono">cm⁻¹</td>     <td class="mono">219.474631</td>   <td class="mono">219.474631</td>   <td class="mono">~0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td class="mono">Hz</td>       <td class="mono">6.5796839205e12</td> <td class="mono">6.5796838038e12</td> <td class="mono">+1.2e+5</td> <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td class="mono">K</td>        <td class="mono">315.77502480</td> <td class="mono">315.77501921</td> <td class="mono">+5.6e-6</td>  <td><span class="badge badge-ok">Near</span></td></tr>
             </tbody>
         </table>
         </div>
@@ -379,9 +388,12 @@
                 </tr>
             </thead>
             <tbody>
-                <tr><td class="mono">HARTREE_TO_EV × EV_TO_HARTREE</td>             <td class="mono">0</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
-                <tr><td class="mono">HARTREE_TO_KCAL_MOL × KCAL_MOL_TO_HARTREE</td> <td class="mono">0</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
-                <tr><td class="mono">HARTREE_TO_KJ_MOL × KJ_MOL_TO_HARTREE</td>     <td class="mono">0</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td>Hartree to eV × eV to Hartree</td>             <td class="mono">0</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td>Hartree to kcal/mol × kcal/mol to Hartree</td> <td class="mono">0</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td>Hartree to kJ/mol × kJ/mol to Hartree</td>     <td class="mono">0</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td>Hartree to cm⁻¹ × cm⁻¹ to Hartree</td>     <td class="mono">0</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td>Hartree to Hz × Hz to Hartree</td>             <td class="mono">0</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td>Hartree to kelvin × kelvin to Hartree</td>     <td class="mono">0</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
             </tbody>
         </table>
         </div>
@@ -400,7 +412,7 @@
             </thead>
             <tbody>
                 <tr><td class="mono">A: (1 eV → Ha) × (Ha → kcal/mol)</td> <td class="mono">23.060547830619</td> <td class="mono">23.060547613288</td> <td class="mono">+2.2e-7</td>   <td><span class="badge badge-ok">Near</span></td></tr>
-                <tr><td class="mono">B: HARTREE_TO_KCAL_MOL / HARTREE_TO_EV</td> <td class="mono">23.060547830619</td> <td class="mono">23.060547613288</td> <td class="mono">+2.2e-7</td>   <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td class="mono">B: Hartree to kcal/mol / Hartree to eV</td> <td class="mono">23.060547830619</td> <td class="mono">23.060547613288</td> <td class="mono">+2.2e-7</td>   <td><span class="badge badge-ok">Near</span></td></tr>
                 <tr><td class="mono"><strong>A − B (within each side)</strong></td> <td class="mono">+3.55e-15</td> <td class="mono">+3.55e-15</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
             </tbody>
         </table>
