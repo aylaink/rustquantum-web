@@ -221,6 +221,177 @@
         </div>
         </details>
 
+        <details class="collapse">
+        <summary><h2 id="molecule-geometry">Molecule Geometry</h2></summary>
+
+        <p>RustQuantum verified against PySCF. The residual ~10⁻⁹ Bohr drift across non-zero coordinates is the predicted CODATA 2022 vs CODATA 2010 <code>a₀</code> mismatch, scaling linearly with the Ångström distance.</p>
+
+        <h3>H₂ — R = 0.7414 Å, charge = 0, spin = 0</h3>
+        <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Atom</th>
+                    <th>Coord</th>
+                    <th>RustQuantum (CODATA 2022)</th>
+                    <th>PySCF (CODATA 2010)</th>
+                    <th>Diff</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>H[0]</strong></td> <td class="mono">x</td> <td class="mono">0.0000000000</td> <td class="mono">0.0000000000</td> <td class="mono">0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>H[0]</strong></td> <td class="mono">y</td> <td class="mono">0.0000000000</td> <td class="mono">0.0000000000</td> <td class="mono">0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>H[0]</strong></td> <td class="mono">z</td> <td class="mono">0.0000000000</td> <td class="mono">0.0000000000</td> <td class="mono">0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>H[1]</strong></td> <td class="mono">x</td> <td class="mono">0.0000000000</td> <td class="mono">0.0000000000</td> <td class="mono">0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>H[1]</strong></td> <td class="mono">y</td> <td class="mono">0.0000000000</td> <td class="mono">0.0000000000</td> <td class="mono">0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>H[1]</strong></td> <td class="mono">z</td> <td class="mono">1.4010429497</td> <td class="mono">1.4010429488</td> <td class="mono">+9e-10</td>  <td><span class="badge badge-ok">Near</span></td></tr>
+            </tbody>
+        </table>
+        </div>
+
+        <h3>He — charge = 0, spin = 0</h3>
+        <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Atom</th>
+                    <th>Coord</th>
+                    <th>RustQuantum (CODATA 2022)</th>
+                    <th>PySCF (CODATA 2010)</th>
+                    <th>Diff</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>He[0]</strong></td> <td class="mono">x</td> <td class="mono">0.0000000000</td> <td class="mono">0.0000000000</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>He[0]</strong></td> <td class="mono">y</td> <td class="mono">0.0000000000</td> <td class="mono">0.0000000000</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>He[0]</strong></td> <td class="mono">z</td> <td class="mono">0.0000000000</td> <td class="mono">0.0000000000</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+            </tbody>
+        </table>
+        </div>
+
+        <h3>LiH — R = 1.5949 Å, charge = 0, spin = 0</h3>
+        <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Atom</th>
+                    <th>Coord</th>
+                    <th>RustQuantum (CODATA 2022)</th>
+                    <th>PySCF (CODATA 2010)</th>
+                    <th>Diff</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Li[0]</strong></td> <td class="mono">x</td> <td class="mono">0.0000000000</td> <td class="mono">0.0000000000</td> <td class="mono">0</td>        <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Li[0]</strong></td> <td class="mono">y</td> <td class="mono">0.0000000000</td> <td class="mono">0.0000000000</td> <td class="mono">0</td>        <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Li[0]</strong></td> <td class="mono">z</td> <td class="mono">0.0000000000</td> <td class="mono">0.0000000000</td> <td class="mono">0</td>        <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>H[1]</strong></td>  <td class="mono">x</td> <td class="mono">0.0000000000</td> <td class="mono">0.0000000000</td> <td class="mono">0</td>        <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>H[1]</strong></td>  <td class="mono">y</td> <td class="mono">0.0000000000</td> <td class="mono">0.0000000000</td> <td class="mono">0</td>        <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>H[1]</strong></td>  <td class="mono">z</td> <td class="mono">3.0139241982</td> <td class="mono">3.0139241961</td> <td class="mono">+2.1e-9</td>  <td><span class="badge badge-ok">Near</span></td></tr>
+            </tbody>
+        </table>
+        </div>
+
+        <h3>H₂O — OH = 0.9572 Å, angle = 104.52°, charge = 0, spin = 0</h3>
+        <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Atom</th>
+                    <th>Coord</th>
+                    <th>RustQuantum (CODATA 2022)</th>
+                    <th>PySCF (CODATA 2010)</th>
+                    <th>Diff</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>O[0]</strong></td> <td class="mono">x</td> <td class="mono">0.0000000000</td>  <td class="mono">0.0000000000</td>  <td class="mono">0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>O[0]</strong></td> <td class="mono">y</td> <td class="mono">0.0000000000</td>  <td class="mono">0.0000000000</td>  <td class="mono">0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>O[0]</strong></td> <td class="mono">z</td> <td class="mono">0.0000000000</td>  <td class="mono">0.0000000000</td>  <td class="mono">0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>H[1]</strong></td> <td class="mono">x</td> <td class="mono">1.4304288094</td>  <td class="mono">1.4304288085</td>  <td class="mono">+9e-10</td>  <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td><strong>H[1]</strong></td> <td class="mono">y</td> <td class="mono">1.1071570448</td>  <td class="mono">1.1071570440</td>  <td class="mono">+8e-10</td>  <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td><strong>H[1]</strong></td> <td class="mono">z</td> <td class="mono">0.0000000000</td>  <td class="mono">0.0000000000</td>  <td class="mono">0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>H[2]</strong></td> <td class="mono">x</td> <td class="mono">−1.4304288094</td> <td class="mono">−1.4304288085</td> <td class="mono">−9e-10</td>  <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td><strong>H[2]</strong></td> <td class="mono">y</td> <td class="mono">1.1071570448</td>  <td class="mono">1.1071570440</td>  <td class="mono">+8e-10</td>  <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td><strong>H[2]</strong></td> <td class="mono">z</td> <td class="mono">0.0000000000</td>  <td class="mono">0.0000000000</td>  <td class="mono">0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+            </tbody>
+        </table>
+        </div>
+
+        <h3>Na⁺ — charge = +1, spin = 0</h3>
+        <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Atom</th>
+                    <th>Coord</th>
+                    <th>RustQuantum (CODATA 2022)</th>
+                    <th>PySCF (CODATA 2010)</th>
+                    <th>Diff</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Na[0]</strong></td> <td class="mono">x</td> <td class="mono">0.0000000000</td> <td class="mono">0.0000000000</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Na[0]</strong></td> <td class="mono">y</td> <td class="mono">0.0000000000</td> <td class="mono">0.0000000000</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Na[0]</strong></td> <td class="mono">z</td> <td class="mono">0.0000000000</td> <td class="mono">0.0000000000</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+            </tbody>
+        </table>
+        </div>
+
+        <h3>Cl⁻ — charge = −1, spin = 0</h3>
+        <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Atom</th>
+                    <th>Coord</th>
+                    <th>RustQuantum (CODATA 2022)</th>
+                    <th>PySCF (CODATA 2010)</th>
+                    <th>Diff</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Cl[0]</strong></td> <td class="mono">x</td> <td class="mono">0.0000000000</td> <td class="mono">0.0000000000</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Cl[0]</strong></td> <td class="mono">y</td> <td class="mono">0.0000000000</td> <td class="mono">0.0000000000</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Cl[0]</strong></td> <td class="mono">z</td> <td class="mono">0.0000000000</td> <td class="mono">0.0000000000</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+            </tbody>
+        </table>
+        </div>
+
+        <h3>H₂O⁺ — OH = 0.9572 Å, angle = 104.52°, charge = +1, spin = 1</h3>
+        <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Atom</th>
+                    <th>Coord</th>
+                    <th>RustQuantum (CODATA 2022)</th>
+                    <th>PySCF (CODATA 2010)</th>
+                    <th>Diff</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>O[0]</strong></td> <td class="mono">x</td> <td class="mono">0.0000000000</td>  <td class="mono">0.0000000000</td>  <td class="mono">0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>O[0]</strong></td> <td class="mono">y</td> <td class="mono">0.0000000000</td>  <td class="mono">0.0000000000</td>  <td class="mono">0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>O[0]</strong></td> <td class="mono">z</td> <td class="mono">0.0000000000</td>  <td class="mono">0.0000000000</td>  <td class="mono">0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>H[1]</strong></td> <td class="mono">x</td> <td class="mono">1.4304288094</td>  <td class="mono">1.4304288085</td>  <td class="mono">+9e-10</td>  <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td><strong>H[1]</strong></td> <td class="mono">y</td> <td class="mono">1.1071570448</td>  <td class="mono">1.1071570440</td>  <td class="mono">+8e-10</td>  <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td><strong>H[1]</strong></td> <td class="mono">z</td> <td class="mono">0.0000000000</td>  <td class="mono">0.0000000000</td>  <td class="mono">0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>H[2]</strong></td> <td class="mono">x</td> <td class="mono">−1.4304288094</td> <td class="mono">−1.4304288085</td> <td class="mono">−9e-10</td>  <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td><strong>H[2]</strong></td> <td class="mono">y</td> <td class="mono">1.1071570448</td>  <td class="mono">1.1071570440</td>  <td class="mono">+8e-10</td>  <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td><strong>H[2]</strong></td> <td class="mono">z</td> <td class="mono">0.0000000000</td>  <td class="mono">0.0000000000</td>  <td class="mono">0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+            </tbody>
+        </table>
+        </div>
+        </details>
+
         <nav class="prev-next" aria-label="Pipeline navigation">
             <a href="pipeline.html" class="prev">
                 <span class="direction">← Previous</span>
