@@ -97,6 +97,11 @@ a:hover {
     border-radius: 4px;
 }
 
+/* ---- Honeypot field (anti-bot, visually hidden but DOM-present) ---- */
+.honeypot {
+    display: none;
+}
+
 /* ---- Visually hidden (a11y) ---- */
 .sr-only {
     position: absolute;
