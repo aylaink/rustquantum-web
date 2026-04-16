@@ -250,7 +250,7 @@ Every page must score ≥ 95 on all four axes (Performance, Accessibility, Best 
 ### 5.4. JAVASCRIPT
 
 - The site is HTML + CSS only by default. No JS required for navigation or content.
-- If JS is ever added, it must: be a single small vanilla module, be deferred (`<script type="module" defer>`), degrade gracefully without JS, and not pull in a framework.
+- If JS is ever added, it must: be a single small vanilla module loaded as `<script type="module" src="…">` (modules are deferred by default — never add an explicit `defer` attribute, the validator flags it as invalid), degrade gracefully without JS, and not pull in a framework.
 - No third-party analytics that set cookies without consent. If analytics are added, choose a cookieless provider (e.g. Plausible) and document it in `pages/privacy.html` and `pages/cookies.html`.
 
 ──────────────────────────────────────────────────────────────────
