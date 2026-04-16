@@ -587,11 +587,33 @@ pre code {
 
 /* ---- Tables (validation) ---- */
 /* Wrap any wide table in .table-wrap to keep horizontal scroll contained
-   to the table itself on narrow viewports — the page chrome stays fixed. */
+   to the table itself on narrow viewports — the page chrome stays fixed.
+   Scrollbar is styled in --accent so it's visible on dark theme (Windows
+   native scrollbars are near-invisible on dark backgrounds). */
 .table-wrap {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     margin: 1.5rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) var(--panel);
+}
+
+.table-wrap::-webkit-scrollbar {
+    height: 10px;
+}
+
+.table-wrap::-webkit-scrollbar-track {
+    background: var(--panel);
+    border-radius: 4px;
+}
+
+.table-wrap::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 4px;
+}
+
+.table-wrap::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-soft);
 }
 
 .table-wrap table {
