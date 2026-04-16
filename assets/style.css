@@ -310,6 +310,47 @@ p.lead {
     color: var(--text);
 }
 
+/* ---- Collapsible section (<details>) ---- */
+.collapse {
+    margin: 2.5rem 0 1rem;
+}
+
+.collapse summary {
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.collapse summary::-webkit-details-marker {
+    display: none;
+}
+
+.collapse summary h2 {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.collapse summary::after {
+    content: '▼';
+    color: var(--accent);
+    font-size: 0.75rem;
+    margin-left: auto;
+    transition: color 0.15s ease;
+}
+
+.collapse:not([open]) summary::after {
+    content: '▶';
+}
+
+.collapse summary:hover::after {
+    color: var(--accent-soft);
+}
+
 /* ---- Heading anchors (hover reveals #) ---- */
 .anchor {
     opacity: 0;
