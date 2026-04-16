@@ -586,6 +586,18 @@ pre code {
 }
 
 /* ---- Tables (validation) ---- */
+/* Wrap any wide table in .table-wrap to keep horizontal scroll contained
+   to the table itself on narrow viewports — the page chrome stays fixed. */
+.table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 1.5rem 0;
+}
+
+.table-wrap table {
+    margin: 0;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
