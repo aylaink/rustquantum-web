@@ -392,6 +392,37 @@
         </div>
         </details>
 
+        <details class="collapse">
+        <summary><h2 id="nuclear-repulsion">Nuclear Repulsion Energy</h2></summary>
+
+        <p>RustQuantum verified against PySCF.</p>
+
+        <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Molecule</th>
+                    <th>Charge</th>
+                    <th>Spin</th>
+                    <th>RustQuantum (CODATA 2022) [Ha]</th>
+                    <th>PySCF (CODATA 2010) [Ha]</th>
+                    <th>Diff</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>H₂</strong></td>   <td class="mono">0</td>   <td class="mono">0</td> <td class="mono">0.7137539932</td> <td class="mono">0.7137539937</td> <td class="mono">−5e-10</td>   <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td><strong>He</strong></td>   <td class="mono">0</td>   <td class="mono">0</td> <td class="mono">0.0000000000</td> <td class="mono">0.0000000000</td> <td class="mono">0</td>        <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>LiH</strong></td>  <td class="mono">0</td>   <td class="mono">0</td> <td class="mono">0.9953800437</td> <td class="mono">0.9953800444</td> <td class="mono">−7e-10</td>   <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td><strong>H₂O</strong></td>  <td class="mono">0</td>   <td class="mono">0</td> <td class="mono">9.1949648480</td> <td class="mono">9.1949648543</td> <td class="mono">−6.3e-9</td>  <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td><strong>Na⁺</strong></td>  <td class="mono">+1</td>  <td class="mono">0</td> <td class="mono">0.0000000000</td> <td class="mono">0.0000000000</td> <td class="mono">0</td>        <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Cl⁻</strong></td>  <td class="mono">−1</td>  <td class="mono">0</td> <td class="mono">0.0000000000</td> <td class="mono">0.0000000000</td> <td class="mono">0</td>        <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>H₂O⁺</strong></td> <td class="mono">+1</td>  <td class="mono">1</td> <td class="mono">9.1949648480</td> <td class="mono">9.1949648543</td> <td class="mono">−6.3e-9</td>  <td><span class="badge badge-ok">Near</span></td></tr>
+            </tbody>
+        </table>
+        </div>
+        </details>
+
         <nav class="prev-next" aria-label="Pipeline navigation">
             <a href="pipeline.html" class="prev">
                 <span class="direction">← Previous</span>
