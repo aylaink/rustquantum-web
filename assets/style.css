@@ -75,6 +75,7 @@ body {
     display: flex;
     flex-direction: column;
     padding-top: 7rem;
+    min-width: max-content;
 }
 
 @media (min-width: 901px) {
