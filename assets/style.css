@@ -1,0 +1,907 @@
+/* ---- Self-hosted fonts ---- */
+/* Download the following woff2 files into assets/fonts/ (both OFL-licensed):
+   - Inter-Regular.woff2, Inter-Bold.woff2
+       https://github.com/rsms/inter/releases  (rsms/inter)
+   - JetBrainsMono-Regular.woff2, JetBrainsMono-Bold.woff2
+       https://github.com/JetBrains/JetBrainsMono/releases
+   Until the files exist, the stack falls back to system fonts (see --sans / --mono). */
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('fonts/Inter-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('fonts/Inter-Bold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('fonts/JetBrainsMono-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('fonts/JetBrainsMono-Bold.woff2') format('woff2');
+}
+
+:root {
+    --bg: #0e1116;
+    --bg-alt: #161b22;
+    --panel: #1b2027;
+    --border: #2a313c;
+    --text: #e6edf3;
+    --text-dim: #9aa4b2;
+    --accent: #ff6b35;
+    --accent-soft: #ff8c5a;
+    --link: #79c0ff;
+    --ok: #3fb950;
+    --warn: #eab308;
+    --err: #ef4444;
+    --accent-glow: rgba(255, 107, 53, 0.12);
+    --mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    line-height: 1.65;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: var(--link);
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+a:hover {
+    color: var(--accent-soft);
+}
+
+/* ---- Focus states (keyboard-only) ---- */
+:focus {
+    outline: none;
+}
+
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+/* ---- Skip-to-content link ---- */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip-link:focus {
+    position: fixed;
+    left: 1rem;
+    top: 1rem;
+    width: auto;
+    height: auto;
+    padding: 0.6rem 1rem;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 4px;
+    z-index: 100;
+    text-decoration: none;
+    font-family: var(--mono);
+    font-size: 0.9rem;
+}
+
+/* ---- Header ---- */
+header {
+    background: var(--bg-alt);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--mono);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--text);
+}
+
+.brand .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 10px var(--accent);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    font-family: var(--mono);
+    font-size: 0.9rem;
+}
+
+nav a {
+    color: var(--text-dim);
+    padding: 0.3rem 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--text);
+    border-bottom-color: var(--accent);
+}
+
+/* ---- Main ---- */
+main {
+    flex: 1;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+    width: 100%;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--text);
+}
+
+/* Anchor offset for sticky header when navigating via #id. */
+h2, h3 {
+    scroll-margin-top: 5rem;
+}
+
+h1 {
+    font-size: clamp(1.8rem, 1.5rem + 1vw, 2.4rem);
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+h3 {
+    font-size: 1.15rem;
+    margin: 1.5rem 0 0.5rem;
+    color: var(--accent-soft);
+}
+
+p {
+    margin-bottom: 1rem;
+    color: var(--text);
+}
+
+p.lead {
+    font-size: 1.15rem;
+    color: var(--text-dim);
+    max-width: 780px;
+}
+
+.subtitle {
+    font-family: var(--mono);
+    color: var(--accent);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* ---- Page meta (date / versions) ---- */
+.page-meta {
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    margin: -0.25rem 0 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed var(--border);
+}
+
+.page-meta .sep {
+    color: var(--accent);
+    margin: 0 0.5rem;
+}
+
+/* ---- Breadcrumbs ---- */
+.breadcrumb {
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    margin-bottom: 1.5rem;
+}
+
+.breadcrumb a {
+    color: var(--text-dim);
+}
+
+.breadcrumb a:hover {
+    color: var(--accent);
+}
+
+.breadcrumb .separator {
+    color: var(--accent);
+    margin: 0 0.4rem;
+}
+
+.breadcrumb [aria-current="page"] {
+    color: var(--text);
+}
+
+/* ---- Heading anchors (hover reveals #) ---- */
+.anchor {
+    opacity: 0;
+    margin-left: 0.4rem;
+    color: var(--text-dim);
+    font-weight: 400;
+    font-family: var(--mono);
+    text-decoration: none;
+    transition: opacity 0.15s ease, color 0.15s ease;
+}
+
+h2:hover .anchor,
+h3:hover .anchor,
+.anchor:focus-visible {
+    opacity: 1;
+}
+
+.anchor:hover {
+    color: var(--accent);
+}
+
+/* ---- Prev/Next pipeline nav ---- */
+.prev-next {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    font-family: var(--mono);
+    font-size: 0.9rem;
+}
+
+.prev-next a {
+    color: var(--text-dim);
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    transition: border-color 0.15s ease, color 0.15s ease;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    min-width: 0;
+    max-width: 48%;
+}
+
+.prev-next a:hover {
+    border-color: var(--accent);
+    color: var(--text);
+}
+
+.prev-next .direction {
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.prev-next .prev { text-align: left; }
+.prev-next .next { text-align: right; margin-left: auto; }
+
+.prev-next .arrow {
+    color: var(--accent);
+    margin: 0 0.3rem;
+}
+
+/* ---- Chart (static SVG) ---- */
+.chart {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.chart svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    font-family: var(--mono);
+    font-size: 11px;
+}
+
+.chart .chart-title {
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.chart .chart-caption {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    margin-top: 0.8rem;
+    line-height: 1.5;
+}
+
+/* SVG internals — styled via classes, driven by design tokens. */
+.chart-grid      { stroke: var(--border); stroke-width: 1; fill: none; }
+.chart-axis-label { fill: var(--text-dim); font-size: 10px; }
+.chart-ref       { stroke: var(--text-dim); stroke-dasharray: 4 4; stroke-width: 1; fill: none; }
+.chart-line      { stroke: var(--accent); stroke-width: 2.5; fill: none; stroke-linejoin: round; stroke-linecap: round; }
+.chart-point     { fill: var(--accent); }
+
+/* ---- Hero (index) ---- */
+.hero {
+    padding: 2rem 0 3rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2.5rem;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 1.5rem + 2.5vw, 3rem);
+}
+
+.hero .tagline {
+    font-family: var(--mono);
+    color: var(--text-dim);
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.hero .tagline span {
+    color: var(--accent);
+}
+
+/* ---- Cards / grid ---- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+/* Compact variant: fixed-width cards, centred — all rows same cell size. */
+.grid-compact {
+    grid-template-columns: repeat(auto-fill, 180px);
+    gap: 0.75rem;
+    justify-content: center;
+}
+
+.grid-compact .card {
+    padding: 0.8rem 1.1rem;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.6rem;
+}
+
+.grid-compact .card h3 {
+    font-size: 1.05rem;
+    margin: 0;
+}
+
+/* Orange number prefix inside an h1 (e.g. "1 Molecule"). */
+h1 .step-num {
+    color: var(--accent);
+}
+
+.grid-compact .card .step {
+    font-size: 1.05rem;
+    letter-spacing: 0;
+}
+
+.card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.25rem 1.4rem;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+    display: block;
+}
+
+.card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.card-standalone {
+    margin: 1.5rem 0;
+}
+
+.card .step {
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    color: var(--accent);
+    letter-spacing: 0.08em;
+}
+
+.card h3 {
+    margin: 0.4rem 0 0.4rem;
+    color: var(--text);
+}
+
+.card p {
+    color: var(--text-dim);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* ---- Report items ---- */
+.report-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    margin: 1rem 0 2rem;
+}
+
+.report {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 6px;
+    padding: 1rem 1.2rem;
+}
+
+.report h3 {
+    color: var(--text);
+    margin: 0 0 0.3rem;
+    font-size: 1.05rem;
+}
+
+.report .tag {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    color: var(--accent);
+    background: rgba(255, 107, 53, 0.1);
+    padding: 0.1rem 0.5rem;
+    border-radius: 3px;
+    margin-right: 0.5rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.report p {
+    color: var(--text-dim);
+    font-size: 0.95rem;
+    margin: 0.3rem 0 0;
+}
+
+.report .result {
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    color: var(--ok);
+    margin-top: 0.4rem;
+    display: block;
+}
+
+/* ---- Code inline ---- */
+code {
+    font-family: var(--mono);
+    background: var(--panel);
+    padding: 0.1rem 0.4rem;
+    border-radius: 3px;
+    font-size: 0.9em;
+    color: var(--accent-soft);
+    border: 1px solid var(--border);
+}
+
+/* ---- Code block ---- */
+pre {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1.2rem;
+    overflow-x: auto;
+    margin: 1rem 0;
+}
+
+pre code {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 0.85rem;
+    color: var(--text);
+}
+
+/* ---- Tables (validation) ---- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.9rem;
+}
+
+th {
+    background: var(--panel);
+    color: var(--accent);
+    font-weight: 600;
+    text-align: left;
+    padding: 0.8rem 1rem;
+    border-bottom: 2px solid var(--border);
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+td {
+    padding: 0.7rem 1rem;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-dim);
+}
+
+tr:hover td {
+    background: var(--accent-glow);
+}
+
+td.mono {
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    color: var(--text);
+}
+
+td strong {
+    color: var(--text);
+}
+
+/* ---- Status badges ---- */
+.badge {
+    display: inline-block;
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    font-family: var(--mono);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.badge-exact  { background: rgba(63, 185, 80, 0.12);  color: var(--ok); }
+.badge-ok     { background: rgba(234, 179, 8, 0.12);  color: var(--warn); }
+.badge-fail   { background: rgba(239, 68, 68, 0.12);  color: var(--err); }
+.badge-pending{ background: rgba(154, 164, 178, 0.12); color: var(--text-dim); }
+
+/* ---- Stats row ---- */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.stat {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.2rem;
+    text-align: center;
+}
+
+.stat .number {
+    font-family: var(--mono);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.stat .label {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    margin-top: 0.3rem;
+}
+
+/* ---- Contact form ---- */
+.contact-form {
+    max-width: 600px;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    margin-bottom: 0.4rem;
+    font-family: var(--mono);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.8rem 1rem;
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 0.95rem;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.form-group textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--text-dim);
+    opacity: 0.6;
+}
+
+.btn-submit {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.15s ease;
+    font-family: var(--sans);
+}
+
+.btn-submit:hover {
+    background: var(--accent-soft);
+    transform: translateY(-1px);
+}
+
+.success-msg {
+    display: none;
+    background: rgba(63, 185, 80, 0.1);
+    border: 1px solid var(--ok);
+    border-radius: 6px;
+    padding: 1.2rem;
+    color: var(--ok);
+    margin-top: 1rem;
+}
+
+/* ---- Pipeline diagram (index) ---- */
+.pipeline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    align-items: center;
+    margin: 1.5rem 0 2rem;
+    font-family: var(--mono);
+    font-size: 0.85rem;
+}
+
+.pipeline .step-box {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    padding: 0.45rem 0.8rem;
+    border-radius: 4px;
+    color: var(--text-dim);
+}
+
+.pipeline .step-box.active {
+    border-color: var(--accent);
+    color: var(--text);
+}
+
+.pipeline .arrow {
+    color: var(--accent);
+}
+
+/* ---- About section (index) ---- */
+.about {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem 1.8rem;
+    margin: 2rem 0;
+}
+
+.about h1,
+.about h2 {
+    margin-top: 0;
+    border: none;
+    padding-bottom: 0;
+    font-size: 1.5rem;
+    color: var(--accent);
+    letter-spacing: 0;
+}
+
+/* ---- Definitions list ---- */
+.definitions {
+    margin: 2rem 0;
+}
+
+.definitions dt {
+    font-family: var(--mono);
+    font-size: 0.9rem;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-top: 1.2rem;
+}
+
+.definitions dt:first-child {
+    margin-top: 0;
+}
+
+.definitions dd {
+    margin: 0.3rem 0 0;
+    color: var(--text-dim);
+}
+
+/* ---- News feed (inside .about) ---- */
+.news-list {
+    list-style: none;
+    margin: 1rem 0 0;
+}
+
+.news-item {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.news-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.news-item:first-child {
+    padding-top: 0;
+}
+
+.news-item time {
+    display: block;
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+    margin-bottom: 0.3rem;
+}
+
+.news-item p {
+    margin: 0;
+    color: var(--text);
+}
+
+/* ---- Footer ---- */
+footer {
+    background: var(--bg-alt);
+    border-top: 1px solid var(--border);
+    padding: 1.5rem;
+    text-align: center;
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    color: var(--text-dim);
+}
+
+footer a {
+    color: var(--text-dim);
+}
+
+footer a:hover {
+    color: var(--accent);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 640px) {
+    main { padding: 2rem 1rem; }
+    nav ul { gap: 0.8rem; font-size: 0.82rem; }
+    .header-inner { padding: 0.8rem 1rem; }
+}
+
+/* ---- Print ---- */
+@media print {
+    :root {
+        --bg: #fff;
+        --bg-alt: #fff;
+        --panel: #fff;
+        --border: #999;
+        --text: #000;
+        --text-dim: #333;
+        --accent: #000;
+        --accent-soft: #000;
+        --link: #000;
+        --ok: #000;
+    }
+
+    html, body { background: #fff; color: #000; }
+
+    header, footer, nav, .skip-link, .brand .dot { display: none; }
+
+    main { max-width: none; padding: 0; }
+
+    h1, h2, h3 { color: #000; page-break-after: avoid; }
+    h2 { border-bottom: 1px solid #000; }
+    h3 { color: #000; }
+
+    a { color: #000; text-decoration: underline; }
+    a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.85em; }
+    a[href^="#"]::after, a[href$=".html"]::after { content: ""; }
+
+    .card, .report, .stat, .about, pre, code {
+        background: #fff;
+        border: 1px solid #ccc;
+        color: #000;
+    }
+
+    .card:hover, tr:hover td { background: #fff; transform: none; }
+
+    table, tr, td, th { page-break-inside: avoid; }
+    th { background: #eee; color: #000; }
+
+    .pipeline .step-box { border: 1px solid #000; color: #000; }
+    .pipeline .arrow { color: #000; }
+
+    .badge { border: 1px solid #000; background: #fff; color: #000; }
+}

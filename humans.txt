@@ -1,0 +1,38 @@
+/* TEAM */
+
+Developer:  Ignacio Lopez Rodriguez
+Site:       https://www.rustquantum.com
+Location:   Spain
+
+
+/* SITE */
+
+Last update:  2026-04-16
+Language:     English
+Doctype:      HTML5
+Standards:    HTML5, CSS3, WCAG 2.1 AA
+Components:   None (plain HTML + CSS)
+Software:     Hand-written
+
+
+/* TECH */
+
+Hosting:      Cloudflare Pages
+CDN:          Cloudflare
+Backend:      Cloudflare Workers (contact form only)
+Email:        Resend API (contact form delivery)
+
+Fonts:        Inter (Rasmus Andersson, OFL)
+              JetBrains Mono (JetBrains, OFL)
+
+Build step:   None
+JavaScript:   Minimal — one module, contact form helper only
+Framework:    None
+
+
+/* VALIDATION REFERENCES */
+
+PySCF         Chemistry results (energies, integrals, SCF)
+SciPy         Special functions (Bessel, Y_lm, quadrature)
+SymPy         Exact symbolic verification
+BSE           Basis set parameters (exponents, coefficients)

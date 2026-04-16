@@ -1,0 +1,20 @@
+# Cloudflare Pages — redirects
+# Docs: https://developers.cloudflare.com/pages/configuration/redirects/
+# Format: <source>  <destination>  <status>
+
+# Apex → www. Keep this as a Cloudflare Bulk Redirect / Page Rule at the
+# DNS layer — listing it here as documentation only.
+#   https://rustquantum.com/*   https://www.rustquantum.com/:splat   301
+
+# Legacy /pages/* paths from before the reports/ + legal/ reorg.
+# Safe to remove once nothing external links to them.
+/pages/basis-results.html   /basis.html              301
+/pages/scf-results.html     /scf.html                301
+/pages/privacy.html         /legal/privacy.html      301
+/pages/terms.html           /legal/terms.html        301
+/pages/cookies.html         /legal/cookies.html      301
+/pages/contact.html         /contact.html            301
+
+# Reports removed for now — any stale link redirects to the related stage.
+/reports/basis-h2.html      /basis.html              301
+/reports/scf-h2.html        /scf.html                301

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Molecule — RustQuantum</title>
+    <meta name="description" content="Geometries, electron counts, atomic masses, and nuclear repulsion energy — the Molecule stage of RustQuantum.">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <link rel="canonical" href="https://www.rustquantum.com/molecule.html">
+    <meta property="og:title" content="Molecule — RustQuantum">
+    <meta property="og:description" content="Geometries, electron counts, atomic masses, and nuclear repulsion energy.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.rustquantum.com/molecule.html">
+    <meta property="og:site_name" content="RustQuantum">
+    <meta property="og:image" content="https://www.rustquantum.com/assets/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="RustQuantum — a molecular quantum simulator in Rust">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preload" href="assets/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header>
+        <div class="header-inner">
+            <div class="brand"><span class="dot"></span>RustQuantum</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pipeline.html">Pipeline</a></li>
+                    <li><a href="molecule.html" class="active" aria-current="page">Molecule</a></li>
+                    <li><a href="constants.html">Constants</a></li>
+                    <li><a href="basis.html">Basis</a></li>
+                    <li><a href="math.html">Math</a></li>
+                    <li><a href="integrals.html">Integrals</a></li>
+                    <li><a href="core_treatment.html">Core Treatment</a></li>
+                    <li><a href="scf.html">SCF</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <h1><span class="step-num">1</span> Molecule</h1>
+        <p class="lead">Before anything else, RustQuantum needs a molecule in memory: atom positions, electron count, and nuclear repulsion.</p>
+
+        <p class="lead">Every integral and energy downstream depends on these — one wrong coordinate silently breaks the rest of the pipeline.</p>
+
+        <nav class="prev-next" aria-label="Pipeline navigation">
+            <a href="pipeline.html" class="prev">
+                <span class="direction">← Previous</span>
+                Pipeline
+            </a>
+            <a href="constants.html" class="next">
+                <span class="direction">Next →</span>
+                Constants
+            </a>
+        </nav>
+    </main>
+
+    <footer>
+        © 2026 Ignacio Lopez Rodriguez · RustQuantum · Personal learning project · <a href="contact.html">Contact</a> · <a href="legal/privacy.html">Privacy</a> · <a href="legal/terms.html">Terms</a> · <a href="legal/cookies.html">Cookies</a>
+    </footer>
+</body>
+</html>
