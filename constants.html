@@ -179,6 +179,234 @@
         </div>
         </details>
 
+        <details class="collapse">
+        <summary><h2 id="energy-conversions">Energy Conversions</h2></summary>
+
+        <p>RustQuantum verified against PySCF.</p>
+
+        <h3>Sole measured constant</h3>
+        <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Constant</th>
+                    <th>Unit</th>
+                    <th>RustQuantum (CODATA 2022)</th>
+                    <th>PySCF (CODATA 2014)</th>
+                    <th>Diff</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>HARTREE_TO_JOULE</strong></td> <td class="mono">J/Ha</td> <td class="mono">4.359744722206000e-18</td> <td class="mono">4.359744644911914e-18</td> <td class="mono">+7.7e-26</td> <td><span class="badge badge-ok">Near</span></td></tr>
+            </tbody>
+        </table>
+        </div>
+
+        <h3>Derived conversions (PySCF exposes directly)</h3>
+        <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Constant</th>
+                    <th>Unit</th>
+                    <th>RustQuantum (CODATA 2022)</th>
+                    <th>PySCF (CODATA 2014)</th>
+                    <th>Diff</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>HARTREE_TO_EV</strong></td>     <td class="mono">eV/Ha</td>   <td class="mono">27.211386245981</td> <td class="mono">27.211386020000</td> <td class="mono">+2.3e-7</td> <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td><strong>HARTREE_TO_CM_INV</strong></td> <td class="mono">cm⁻¹/Ha</td> <td class="mono">219474.631363</td>  <td class="mono">219474.631116</td>  <td class="mono">+2.5e-4</td> <td><span class="badge badge-ok">Near</span></td></tr>
+            </tbody>
+        </table>
+        </div>
+
+        <h3>Derived conversions (not exposed by PySCF)</h3>
+        <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Constant</th>
+                    <th>Unit</th>
+                    <th>RustQuantum (CODATA 2022)</th>
+                    <th>PySCF (CODATA 2014)</th>
+                    <th>Diff</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>HARTREE_TO_KJ_MOL</strong></td>   <td class="mono">kJ/mol/Ha</td>   <td class="mono">2625.4996394792</td> <td class="mono">2625.4995929316</td> <td class="mono">+4.7e-5</td> <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td><strong>HARTREE_TO_KCAL_MOL</strong></td> <td class="mono">kcal/mol/Ha</td> <td class="mono">627.5094740629</td>  <td class="mono">627.5094629378</td>  <td class="mono">+1.1e-5</td> <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td><strong>HARTREE_TO_HZ</strong></td>       <td class="mono">Hz/Ha</td>       <td class="mono">6.5796839205e15</td> <td class="mono">6.5796838038e15</td> <td class="mono">+1.2e+8</td> <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td><strong>HARTREE_TO_KELVIN</strong></td>   <td class="mono">K/Ha</td>        <td class="mono">315775.02480399</td> <td class="mono">315775.01920560</td> <td class="mono">+5.6e-3</td> <td><span class="badge badge-ok">Near</span></td></tr>
+            </tbody>
+        </table>
+        </div>
+
+        <h3>Inverses</h3>
+        <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Constant</th>
+                    <th>Unit</th>
+                    <th>RustQuantum (CODATA 2022)</th>
+                    <th>PySCF (CODATA 2014)</th>
+                    <th>Diff</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>EV_TO_HARTREE</strong></td>       <td class="mono">Ha/eV</td>         <td class="mono">3.6749322175664220e-2</td> <td class="mono">3.6749322480854656e-2</td> <td class="mono">−3.1e-10</td> <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td><strong>KCAL_MOL_TO_HARTREE</strong></td> <td class="mono">Ha/(kcal/mol)</td> <td class="mono">1.5936014376410300e-3</td> <td class="mono">1.5936014658940536e-3</td> <td class="mono">−2.8e-11</td> <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td><strong>KJ_MOL_TO_HARTREE</strong></td>   <td class="mono">Ha/(kJ/mol)</td>   <td class="mono">3.8087988471343932e-4</td> <td class="mono">3.8087989146607396e-4</td> <td class="mono">−6.8e-12</td> <td><span class="badge badge-ok">Near</span></td></tr>
+            </tbody>
+        </table>
+        </div>
+
+        <h3>Chemical accuracy threshold</h3>
+        <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Constant</th>
+                    <th>Unit</th>
+                    <th>RustQuantum (CODATA 2022)</th>
+                    <th>PySCF (CODATA 2014)</th>
+                    <th>Diff</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>CHEMICAL_ACCURACY_HARTREE</strong></td> <td class="mono">Ha</td> <td class="mono">0.00159360143764</td> <td class="mono">0.00159360146589</td> <td class="mono">−2.8e-11</td> <td><span class="badge badge-ok">Near</span></td></tr>
+            </tbody>
+        </table>
+        </div>
+
+        <h3>Helper function examples</h3>
+
+        <h4>E = 1.0 Ha (unit probe)</h4>
+        <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Unit out</th>
+                    <th>RustQuantum (CODATA 2022)</th>
+                    <th>PySCF (CODATA 2014)</th>
+                    <th>Diff</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td class="mono">eV</td>       <td class="mono">27.2113862460</td>  <td class="mono">27.2113860200</td>  <td class="mono">+2.3e-7</td> <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td class="mono">kcal/mol</td> <td class="mono">627.5094740629</td> <td class="mono">627.5094629378</td> <td class="mono">+1.1e-5</td> <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td class="mono">kJ/mol</td>   <td class="mono">2625.4996394792</td> <td class="mono">2625.4995929316</td> <td class="mono">+4.7e-5</td> <td><span class="badge badge-ok">Near</span></td></tr>
+            </tbody>
+        </table>
+        </div>
+
+        <h4>E = −1.0 Ha</h4>
+        <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Unit out</th>
+                    <th>RustQuantum (CODATA 2022)</th>
+                    <th>PySCF (CODATA 2014)</th>
+                    <th>Diff</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td class="mono">eV</td>       <td class="mono">−27.2113862460</td>  <td class="mono">−27.2113860200</td>  <td class="mono">−2.3e-7</td> <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td class="mono">kcal/mol</td> <td class="mono">−627.5094740629</td> <td class="mono">−627.5094629378</td> <td class="mono">−1.1e-5</td> <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td class="mono">kJ/mol</td>   <td class="mono">−2625.4996394792</td> <td class="mono">−2625.4995929316</td> <td class="mono">−4.7e-5</td> <td><span class="badge badge-ok">Near</span></td></tr>
+            </tbody>
+        </table>
+        </div>
+
+        <h4>E = −75.012736 Ha (H₂O FCI, STO-3G)</h4>
+        <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Unit out</th>
+                    <th>RustQuantum (CODATA 2022)</th>
+                    <th>PySCF (CODATA 2014)</th>
+                    <th>Diff</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td class="mono">eV</td>       <td class="mono">−2041.2005326638</td>   <td class="mono">−2041.2005157124</td>   <td class="mono">−1.7e-5</td> <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td class="mono">kcal/mol</td> <td class="mono">−47071.2025153790</td>  <td class="mono">−47071.2016808518</td>  <td class="mono">−8.3e-4</td> <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td class="mono">kJ/mol</td>   <td class="mono">−196945.9113243456</td> <td class="mono">−196945.9078326838</td> <td class="mono">−3.5e-3</td> <td><span class="badge badge-ok">Near</span></td></tr>
+            </tbody>
+        </table>
+        </div>
+
+        <h4>E = 1 mHa (vibrational-quantum ballpark)</h4>
+        <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Unit out</th>
+                    <th>RustQuantum (CODATA 2022)</th>
+                    <th>PySCF (CODATA 2014)</th>
+                    <th>Diff</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td class="mono">eV</td>       <td class="mono">0.0272113862</td> <td class="mono">0.0272113860</td> <td class="mono">+2.3e-10</td> <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td class="mono">kcal/mol</td> <td class="mono">0.6275094741</td> <td class="mono">0.6275094629</td> <td class="mono">+1.1e-8</td>  <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td class="mono">kJ/mol</td>   <td class="mono">2.6254996395</td> <td class="mono">2.6254995929</td> <td class="mono">+4.7e-8</td>  <td><span class="badge badge-ok">Near</span></td></tr>
+            </tbody>
+        </table>
+        </div>
+
+        <h3>Round-trip invariants</h3>
+        <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Expression</th>
+                    <th>RustQuantum Δ</th>
+                    <th>PySCF Δ</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td class="mono">HARTREE_TO_EV × EV_TO_HARTREE</td>             <td class="mono">0</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td class="mono">HARTREE_TO_KCAL_MOL × KCAL_MOL_TO_HARTREE</td> <td class="mono">0</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td class="mono">HARTREE_TO_KJ_MOL × KJ_MOL_TO_HARTREE</td>     <td class="mono">0</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+            </tbody>
+        </table>
+        </div>
+
+        <h3>Cross-consistency: 1 eV in kcal/mol via two routes</h3>
+        <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Route</th>
+                    <th>RustQuantum (CODATA 2022)</th>
+                    <th>PySCF (CODATA 2014)</th>
+                    <th>Diff</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td class="mono">A: (1 eV → Ha) × (Ha → kcal/mol)</td> <td class="mono">23.060547830619</td> <td class="mono">23.060547613288</td> <td class="mono">+2.2e-7</td>   <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td class="mono">B: HARTREE_TO_KCAL_MOL / HARTREE_TO_EV</td> <td class="mono">23.060547830619</td> <td class="mono">23.060547613288</td> <td class="mono">+2.2e-7</td>   <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td class="mono"><strong>A − B (within each side)</strong></td> <td class="mono">+3.55e-15</td> <td class="mono">+3.55e-15</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+            </tbody>
+        </table>
+        </div>
+        </details>
+
         <nav class="prev-next" aria-label="Pipeline navigation">
             <a href="molecule.html" class="prev">
                 <span class="direction">← Previous</span>
