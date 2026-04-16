@@ -75,12 +75,16 @@ body {
     display: flex;
     flex-direction: column;
     padding-top: 7rem;
-    min-width: max-content;
 }
 
 @media (min-width: 901px) {
     body {
         padding-top: 4.5rem;
+        /* Only stretch the body to content width on desktop. On mobile
+           this would force body wider than the viewport (because the
+           9-item nav has a ~900 px natural width), which makes the
+           browser zoom out to fit and requires pinch-out to read. */
+        min-width: max-content;
     }
 }
 
