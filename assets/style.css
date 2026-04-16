@@ -64,6 +64,28 @@
 
 html {
     scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) var(--panel);
+}
+
+/* Make the window scrollbars visible on dark theme — Windows / Chromium
+   natives are near-invisible against --bg. Applies to both axes. */
+html::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+html::-webkit-scrollbar-track {
+    background: var(--panel);
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 4px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-soft);
 }
 
 body {
