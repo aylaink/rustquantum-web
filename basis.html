@@ -48,9 +48,276 @@
 
     <main id="main">
         <h1><span class="step-num">3</span> Basis</h1>
-        <p class="lead">A <em>basis set</em> is the finite list of Gaussian functions used to expand each atomic orbital.</p>
+        <p class="lead">RustQuantum can work with different basis sets.</p>
 
-        <p class="lead">Every exponent and coefficient is cross-checked against the <strong>Basis Set Exchange</strong> — a wrong value silently destroys every downstream energy.</p>
+        <details class="collapse">
+        <summary><h2 id="sto-3g">STO-3G</h2></summary>
+
+        <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Element</th>
+                    <th>Z</th>
+                    <th>RustQuantum (Cartesian)</th>
+                    <th>PySCF (Cartesian)</th>
+                    <th>PySCF (Spherical)</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>H</strong></td>  <td class="mono">1</td>  <td class="mono">1</td>  <td class="mono">1</td>  <td class="mono">1</td>  <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>He</strong></td> <td class="mono">2</td>  <td class="mono">1</td>  <td class="mono">1</td>  <td class="mono">1</td>  <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Li</strong></td> <td class="mono">3</td>  <td class="mono">5</td>  <td class="mono">5</td>  <td class="mono">5</td>  <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Be</strong></td> <td class="mono">4</td>  <td class="mono">5</td>  <td class="mono">5</td>  <td class="mono">5</td>  <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>B</strong></td>  <td class="mono">5</td>  <td class="mono">5</td>  <td class="mono">5</td>  <td class="mono">5</td>  <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>C</strong></td>  <td class="mono">6</td>  <td class="mono">5</td>  <td class="mono">5</td>  <td class="mono">5</td>  <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>N</strong></td>  <td class="mono">7</td>  <td class="mono">5</td>  <td class="mono">5</td>  <td class="mono">5</td>  <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>O</strong></td>  <td class="mono">8</td>  <td class="mono">5</td>  <td class="mono">5</td>  <td class="mono">5</td>  <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>F</strong></td>  <td class="mono">9</td>  <td class="mono">5</td>  <td class="mono">5</td>  <td class="mono">5</td>  <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Ne</strong></td> <td class="mono">10</td> <td class="mono">5</td>  <td class="mono">5</td>  <td class="mono">5</td>  <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Na</strong></td> <td class="mono">11</td> <td class="mono">9</td>  <td class="mono">9</td>  <td class="mono">9</td>  <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Mg</strong></td> <td class="mono">12</td> <td class="mono">9</td>  <td class="mono">9</td>  <td class="mono">9</td>  <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Al</strong></td> <td class="mono">13</td> <td class="mono">9</td>  <td class="mono">9</td>  <td class="mono">9</td>  <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Si</strong></td> <td class="mono">14</td> <td class="mono">9</td>  <td class="mono">9</td>  <td class="mono">9</td>  <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>P</strong></td>  <td class="mono">15</td> <td class="mono">9</td>  <td class="mono">9</td>  <td class="mono">9</td>  <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>S</strong></td>  <td class="mono">16</td> <td class="mono">9</td>  <td class="mono">9</td>  <td class="mono">9</td>  <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Cl</strong></td> <td class="mono">17</td> <td class="mono">9</td>  <td class="mono">9</td>  <td class="mono">9</td>  <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Ar</strong></td> <td class="mono">18</td> <td class="mono">9</td>  <td class="mono">9</td>  <td class="mono">9</td>  <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>K</strong></td>  <td class="mono">19</td> <td class="mono">13</td> <td class="mono">13</td> <td class="mono">13</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Ca</strong></td> <td class="mono">20</td> <td class="mono">13</td> <td class="mono">13</td> <td class="mono">13</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Sc</strong></td> <td class="mono">21</td> <td class="mono">19</td> <td class="mono">19</td> <td class="mono">18</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Ti</strong></td> <td class="mono">22</td> <td class="mono">19</td> <td class="mono">19</td> <td class="mono">18</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>V</strong></td>  <td class="mono">23</td> <td class="mono">19</td> <td class="mono">19</td> <td class="mono">18</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Cr</strong></td> <td class="mono">24</td> <td class="mono">19</td> <td class="mono">19</td> <td class="mono">18</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Mn</strong></td> <td class="mono">25</td> <td class="mono">19</td> <td class="mono">19</td> <td class="mono">18</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Fe</strong></td> <td class="mono">26</td> <td class="mono">19</td> <td class="mono">19</td> <td class="mono">18</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Co</strong></td> <td class="mono">27</td> <td class="mono">19</td> <td class="mono">19</td> <td class="mono">18</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Ni</strong></td> <td class="mono">28</td> <td class="mono">19</td> <td class="mono">19</td> <td class="mono">18</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Cu</strong></td> <td class="mono">29</td> <td class="mono">19</td> <td class="mono">19</td> <td class="mono">18</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Zn</strong></td> <td class="mono">30</td> <td class="mono">19</td> <td class="mono">19</td> <td class="mono">18</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Ga</strong></td> <td class="mono">31</td> <td class="mono">19</td> <td class="mono">19</td> <td class="mono">18</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Ge</strong></td> <td class="mono">32</td> <td class="mono">19</td> <td class="mono">19</td> <td class="mono">18</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>As</strong></td> <td class="mono">33</td> <td class="mono">19</td> <td class="mono">19</td> <td class="mono">18</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Se</strong></td> <td class="mono">34</td> <td class="mono">19</td> <td class="mono">19</td> <td class="mono">18</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Br</strong></td> <td class="mono">35</td> <td class="mono">19</td> <td class="mono">19</td> <td class="mono">18</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Kr</strong></td> <td class="mono">36</td> <td class="mono">19</td> <td class="mono">19</td> <td class="mono">18</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Rb</strong></td> <td class="mono">37</td> <td class="mono">23</td> <td class="mono">23</td> <td class="mono">22</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Sr</strong></td> <td class="mono">38</td> <td class="mono">23</td> <td class="mono">23</td> <td class="mono">22</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Y</strong></td>  <td class="mono">39</td> <td class="mono">29</td> <td class="mono">29</td> <td class="mono">27</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Zr</strong></td> <td class="mono">40</td> <td class="mono">29</td> <td class="mono">29</td> <td class="mono">27</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Nb</strong></td> <td class="mono">41</td> <td class="mono">29</td> <td class="mono">29</td> <td class="mono">27</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Mo</strong></td> <td class="mono">42</td> <td class="mono">29</td> <td class="mono">29</td> <td class="mono">27</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Tc</strong></td> <td class="mono">43</td> <td class="mono">29</td> <td class="mono">29</td> <td class="mono">27</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Ru</strong></td> <td class="mono">44</td> <td class="mono">29</td> <td class="mono">29</td> <td class="mono">27</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Rh</strong></td> <td class="mono">45</td> <td class="mono">29</td> <td class="mono">29</td> <td class="mono">27</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Pd</strong></td> <td class="mono">46</td> <td class="mono">29</td> <td class="mono">29</td> <td class="mono">27</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Ag</strong></td> <td class="mono">47</td> <td class="mono">29</td> <td class="mono">29</td> <td class="mono">27</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Cd</strong></td> <td class="mono">48</td> <td class="mono">29</td> <td class="mono">29</td> <td class="mono">27</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>In</strong></td> <td class="mono">49</td> <td class="mono">29</td> <td class="mono">29</td> <td class="mono">27</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Sn</strong></td> <td class="mono">50</td> <td class="mono">29</td> <td class="mono">29</td> <td class="mono">27</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Sb</strong></td> <td class="mono">51</td> <td class="mono">29</td> <td class="mono">29</td> <td class="mono">27</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Te</strong></td> <td class="mono">52</td> <td class="mono">29</td> <td class="mono">29</td> <td class="mono">27</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>I</strong></td>  <td class="mono">53</td> <td class="mono">29</td> <td class="mono">29</td> <td class="mono">27</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Xe</strong></td> <td class="mono">54</td> <td class="mono">29</td> <td class="mono">—</td>  <td class="mono">—</td>  <td><span class="badge badge-ok">RQ only</span></td></tr>
+            </tbody>
+        </table>
+        </div>
+        </details>
+
+        <details class="collapse">
+        <summary><h2 id="sto-6g">STO-6G</h2></summary>
+
+        <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Element</th>
+                    <th>Z</th>
+                    <th>RustQuantum (Cartesian)</th>
+                    <th>PySCF (Cartesian)</th>
+                    <th>PySCF (Spherical)</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>H</strong></td>  <td class="mono">1</td>  <td class="mono">1</td>  <td class="mono">1</td>  <td class="mono">1</td>  <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>He</strong></td> <td class="mono">2</td>  <td class="mono">1</td>  <td class="mono">1</td>  <td class="mono">1</td>  <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Li</strong></td> <td class="mono">3</td>  <td class="mono">5</td>  <td class="mono">5</td>  <td class="mono">5</td>  <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Be</strong></td> <td class="mono">4</td>  <td class="mono">5</td>  <td class="mono">5</td>  <td class="mono">5</td>  <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>B</strong></td>  <td class="mono">5</td>  <td class="mono">5</td>  <td class="mono">5</td>  <td class="mono">5</td>  <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>C</strong></td>  <td class="mono">6</td>  <td class="mono">5</td>  <td class="mono">5</td>  <td class="mono">5</td>  <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>N</strong></td>  <td class="mono">7</td>  <td class="mono">5</td>  <td class="mono">5</td>  <td class="mono">5</td>  <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>O</strong></td>  <td class="mono">8</td>  <td class="mono">5</td>  <td class="mono">5</td>  <td class="mono">5</td>  <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>F</strong></td>  <td class="mono">9</td>  <td class="mono">5</td>  <td class="mono">5</td>  <td class="mono">5</td>  <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Ne</strong></td> <td class="mono">10</td> <td class="mono">5</td>  <td class="mono">5</td>  <td class="mono">5</td>  <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Na</strong></td> <td class="mono">11</td> <td class="mono">9</td>  <td class="mono">9</td>  <td class="mono">9</td>  <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Mg</strong></td> <td class="mono">12</td> <td class="mono">9</td>  <td class="mono">9</td>  <td class="mono">9</td>  <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Al</strong></td> <td class="mono">13</td> <td class="mono">9</td>  <td class="mono">9</td>  <td class="mono">9</td>  <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Si</strong></td> <td class="mono">14</td> <td class="mono">9</td>  <td class="mono">9</td>  <td class="mono">9</td>  <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>P</strong></td>  <td class="mono">15</td> <td class="mono">9</td>  <td class="mono">9</td>  <td class="mono">9</td>  <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>S</strong></td>  <td class="mono">16</td> <td class="mono">9</td>  <td class="mono">9</td>  <td class="mono">9</td>  <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Cl</strong></td> <td class="mono">17</td> <td class="mono">9</td>  <td class="mono">9</td>  <td class="mono">9</td>  <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Ar</strong></td> <td class="mono">18</td> <td class="mono">9</td>  <td class="mono">9</td>  <td class="mono">9</td>  <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>K</strong></td>  <td class="mono">19</td> <td class="mono">13</td> <td class="mono">13</td> <td class="mono">13</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Ca</strong></td> <td class="mono">20</td> <td class="mono">13</td> <td class="mono">13</td> <td class="mono">13</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Sc</strong></td> <td class="mono">21</td> <td class="mono">19</td> <td class="mono">19</td> <td class="mono">18</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Ti</strong></td> <td class="mono">22</td> <td class="mono">19</td> <td class="mono">19</td> <td class="mono">18</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>V</strong></td>  <td class="mono">23</td> <td class="mono">19</td> <td class="mono">19</td> <td class="mono">18</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Cr</strong></td> <td class="mono">24</td> <td class="mono">19</td> <td class="mono">19</td> <td class="mono">18</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Mn</strong></td> <td class="mono">25</td> <td class="mono">19</td> <td class="mono">19</td> <td class="mono">18</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Fe</strong></td> <td class="mono">26</td> <td class="mono">19</td> <td class="mono">19</td> <td class="mono">18</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Co</strong></td> <td class="mono">27</td> <td class="mono">19</td> <td class="mono">19</td> <td class="mono">18</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Ni</strong></td> <td class="mono">28</td> <td class="mono">19</td> <td class="mono">19</td> <td class="mono">18</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Cu</strong></td> <td class="mono">29</td> <td class="mono">19</td> <td class="mono">19</td> <td class="mono">18</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Zn</strong></td> <td class="mono">30</td> <td class="mono">19</td> <td class="mono">19</td> <td class="mono">18</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Ga</strong></td> <td class="mono">31</td> <td class="mono">19</td> <td class="mono">19</td> <td class="mono">18</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Ge</strong></td> <td class="mono">32</td> <td class="mono">19</td> <td class="mono">19</td> <td class="mono">18</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>As</strong></td> <td class="mono">33</td> <td class="mono">19</td> <td class="mono">19</td> <td class="mono">18</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Se</strong></td> <td class="mono">34</td> <td class="mono">19</td> <td class="mono">19</td> <td class="mono">18</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Br</strong></td> <td class="mono">35</td> <td class="mono">19</td> <td class="mono">19</td> <td class="mono">18</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Kr</strong></td> <td class="mono">36</td> <td class="mono">19</td> <td class="mono">19</td> <td class="mono">18</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Rb</strong></td> <td class="mono">37</td> <td class="mono">23</td> <td class="mono">—</td>  <td class="mono">—</td>  <td><span class="badge badge-ok">RQ only</span></td></tr>
+                <tr><td><strong>Sr</strong></td> <td class="mono">38</td> <td class="mono">23</td> <td class="mono">—</td>  <td class="mono">—</td>  <td><span class="badge badge-ok">RQ only</span></td></tr>
+                <tr><td><strong>Y</strong></td>  <td class="mono">39</td> <td class="mono">29</td> <td class="mono">—</td>  <td class="mono">—</td>  <td><span class="badge badge-ok">RQ only</span></td></tr>
+                <tr><td><strong>Zr</strong></td> <td class="mono">40</td> <td class="mono">29</td> <td class="mono">—</td>  <td class="mono">—</td>  <td><span class="badge badge-ok">RQ only</span></td></tr>
+                <tr><td><strong>Nb</strong></td> <td class="mono">41</td> <td class="mono">29</td> <td class="mono">—</td>  <td class="mono">—</td>  <td><span class="badge badge-ok">RQ only</span></td></tr>
+                <tr><td><strong>Mo</strong></td> <td class="mono">42</td> <td class="mono">29</td> <td class="mono">—</td>  <td class="mono">—</td>  <td><span class="badge badge-ok">RQ only</span></td></tr>
+                <tr><td><strong>Tc</strong></td> <td class="mono">43</td> <td class="mono">29</td> <td class="mono">—</td>  <td class="mono">—</td>  <td><span class="badge badge-ok">RQ only</span></td></tr>
+                <tr><td><strong>Ru</strong></td> <td class="mono">44</td> <td class="mono">29</td> <td class="mono">—</td>  <td class="mono">—</td>  <td><span class="badge badge-ok">RQ only</span></td></tr>
+                <tr><td><strong>Rh</strong></td> <td class="mono">45</td> <td class="mono">29</td> <td class="mono">—</td>  <td class="mono">—</td>  <td><span class="badge badge-ok">RQ only</span></td></tr>
+                <tr><td><strong>Pd</strong></td> <td class="mono">46</td> <td class="mono">29</td> <td class="mono">—</td>  <td class="mono">—</td>  <td><span class="badge badge-ok">RQ only</span></td></tr>
+                <tr><td><strong>Ag</strong></td> <td class="mono">47</td> <td class="mono">29</td> <td class="mono">—</td>  <td class="mono">—</td>  <td><span class="badge badge-ok">RQ only</span></td></tr>
+                <tr><td><strong>Cd</strong></td> <td class="mono">48</td> <td class="mono">29</td> <td class="mono">—</td>  <td class="mono">—</td>  <td><span class="badge badge-ok">RQ only</span></td></tr>
+                <tr><td><strong>In</strong></td> <td class="mono">49</td> <td class="mono">29</td> <td class="mono">—</td>  <td class="mono">—</td>  <td><span class="badge badge-ok">RQ only</span></td></tr>
+                <tr><td><strong>Sn</strong></td> <td class="mono">50</td> <td class="mono">29</td> <td class="mono">—</td>  <td class="mono">—</td>  <td><span class="badge badge-ok">RQ only</span></td></tr>
+                <tr><td><strong>Sb</strong></td> <td class="mono">51</td> <td class="mono">29</td> <td class="mono">—</td>  <td class="mono">—</td>  <td><span class="badge badge-ok">RQ only</span></td></tr>
+                <tr><td><strong>Te</strong></td> <td class="mono">52</td> <td class="mono">29</td> <td class="mono">—</td>  <td class="mono">—</td>  <td><span class="badge badge-ok">RQ only</span></td></tr>
+                <tr><td><strong>I</strong></td>  <td class="mono">53</td> <td class="mono">29</td> <td class="mono">—</td>  <td class="mono">—</td>  <td><span class="badge badge-ok">RQ only</span></td></tr>
+                <tr><td><strong>Xe</strong></td> <td class="mono">54</td> <td class="mono">29</td> <td class="mono">—</td>  <td class="mono">—</td>  <td><span class="badge badge-ok">RQ only</span></td></tr>
+            </tbody>
+        </table>
+        </div>
+        </details>
+
+        <details class="collapse">
+        <summary><h2 id="6-31g">6-31G</h2></summary>
+
+        <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Element</th>
+                    <th>RustQuantum (Cartesian)</th>
+                    <th>PySCF Cartesian</th>
+                    <th>Diff</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>H</strong></td>  <td class="mono">2</td>  <td class="mono">2</td>  <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>He</strong></td> <td class="mono">2</td>  <td class="mono">2</td>  <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>C</strong></td>  <td class="mono">9</td>  <td class="mono">9</td>  <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>O</strong></td>  <td class="mono">9</td>  <td class="mono">9</td>  <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Na</strong></td> <td class="mono">13</td> <td class="mono">13</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Ar</strong></td> <td class="mono">13</td> <td class="mono">13</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>K</strong></td>  <td class="mono">17</td> <td class="mono">17</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Fe</strong></td> <td class="mono">29</td> <td class="mono">29</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+            </tbody>
+        </table>
+        </div>
+        </details>
+
+        <details class="collapse">
+        <summary><h2 id="6-31gd">6-31G(d)</h2></summary>
+
+        <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Element</th>
+                    <th>RustQuantum (Cartesian)</th>
+                    <th>PySCF Cartesian</th>
+                    <th>Diff</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>H</strong></td>  <td class="mono">2</td>  <td class="mono">2</td>  <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>He</strong></td> <td class="mono">2</td>  <td class="mono">2</td>  <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>C</strong></td>  <td class="mono">15</td> <td class="mono">15</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>O</strong></td>  <td class="mono">15</td> <td class="mono">15</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Na</strong></td> <td class="mono">19</td> <td class="mono">19</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Si</strong></td> <td class="mono">19</td> <td class="mono">19</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Ar</strong></td> <td class="mono">19</td> <td class="mono">19</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+            </tbody>
+        </table>
+        </div>
+        </details>
+
+        <details class="collapse">
+        <summary><h2 id="6-311g">6-311G</h2></summary>
+
+        <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Element</th>
+                    <th>RustQuantum (Cartesian)</th>
+                    <th>PySCF Cartesian</th>
+                    <th>Diff</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>H</strong></td>  <td class="mono">3</td>  <td class="mono">3</td>  <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>He</strong></td> <td class="mono">3</td>  <td class="mono">3</td>  <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>C</strong></td>  <td class="mono">13</td> <td class="mono">13</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>O</strong></td>  <td class="mono">13</td> <td class="mono">13</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Na</strong></td> <td class="mono">21</td> <td class="mono">21</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Si</strong></td> <td class="mono">21</td> <td class="mono">21</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Ar</strong></td> <td class="mono">21</td> <td class="mono">21</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+            </tbody>
+        </table>
+        </div>
+        </details>
+
+        <details class="collapse">
+        <summary><h2 id="def2-svp">def2-SVP</h2></summary>
+
+        <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Element</th>
+                    <th>Z</th>
+                    <th>RustQuantum (Cartesian)</th>
+                    <th>PySCF Cartesian</th>
+                    <th>Diff</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>H</strong></td>  <td class="mono">1</td>  <td class="mono">5</td>  <td class="mono">5</td>  <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>He</strong></td> <td class="mono">2</td>  <td class="mono">5</td>  <td class="mono">5</td>  <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>C</strong></td>  <td class="mono">6</td>  <td class="mono">15</td> <td class="mono">15</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>O</strong></td>  <td class="mono">8</td>  <td class="mono">15</td> <td class="mono">15</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Na</strong></td> <td class="mono">11</td> <td class="mono">16</td> <td class="mono">16</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Ar</strong></td> <td class="mono">18</td> <td class="mono">19</td> <td class="mono">19</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>K</strong></td>  <td class="mono">19</td> <td class="mono">26</td> <td class="mono">26</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Fe</strong></td> <td class="mono">26</td> <td class="mono">36</td> <td class="mono">36</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Kr</strong></td> <td class="mono">36</td> <td class="mono">35</td> <td class="mono">35</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Cs</strong></td> <td class="mono">55</td> <td class="mono">26</td> <td class="mono">26</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>La</strong></td> <td class="mono">57</td> <td class="mono">37</td> <td class="mono">37</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Hf</strong></td> <td class="mono">72</td> <td class="mono">37</td> <td class="mono">37</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Au</strong></td> <td class="mono">79</td> <td class="mono">37</td> <td class="mono">37</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Hg</strong></td> <td class="mono">80</td> <td class="mono">37</td> <td class="mono">37</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Pb</strong></td> <td class="mono">82</td> <td class="mono">28</td> <td class="mono">28</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td><strong>Rn</strong></td> <td class="mono">86</td> <td class="mono">59</td> <td class="mono">59</td> <td class="mono">0</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+            </tbody>
+        </table>
+        </div>
+        </details>
 
         <nav class="prev-next" aria-label="Pipeline navigation">
             <a href="constants.html" class="prev">
