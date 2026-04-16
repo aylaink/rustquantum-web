@@ -33,7 +33,6 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="pipeline.html">Pipeline</a></li>
                     <li><a href="molecule.html">Molecule</a></li>
                     <li><a href="constants.html">Constants</a></li>
                     <li><a href="basis.html">Basis</a></li>
@@ -47,15 +46,9 @@
     </header>
 
     <main id="main">
-        <h1><span class="step-num">6</span> Core Treatment · ECP</h1>
-        <p class="lead">How an atom's inner (core) electrons are handled — explicitly (all-electron), frozen, or replaced by an effective potential. In heavy atoms the choice drives both the cost and the accuracy of the calculation.</p>
+        <h1>Core Treatment</h1>
+        <p class="lead">RustQuantum supports different strategies to handle core electrons.</p>
 
-        <p class="lead">RustQuantum implements the <strong>Stuttgart RLC</strong> family (Bergner 1993) and validates parameter tables, angular couplings, and the radial kernel independently.</p>
-
-        <dl class="definitions">
-            <dt>ECP — Effective Core Potential</dt>
-            <dd>An analytical potential that stands in for the inner electrons, reproducing their averaged effect on valence electrons while cutting cost and folding in scalar relativistic corrections.</dd>
-        </dl>
 
         <nav class="prev-next" aria-label="Pipeline navigation">
             <a href="integrals.html" class="prev">
