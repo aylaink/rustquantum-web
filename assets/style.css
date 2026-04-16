@@ -74,6 +74,13 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    padding-top: 7rem;
+}
+
+@media (min-width: 901px) {
+    body {
+        padding-top: 4.5rem;
+    }
 }
 
 a {
@@ -145,8 +152,10 @@ a:hover {
 header {
     background: var(--bg-alt);
     border-bottom: 1px solid var(--border);
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 10;
     backdrop-filter: blur(10px);
 }
