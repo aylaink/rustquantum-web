@@ -653,6 +653,10 @@ pre code {
     overflow-x: auto;
 }
 
+.table-wrap.fit-scaled {
+    overflow: hidden;
+}
+
 .table-wrap table {
     margin: 0;
 }
