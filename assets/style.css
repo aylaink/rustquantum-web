@@ -75,6 +75,7 @@ body {
     display: flex;
     flex-direction: column;
     padding-top: 7rem;
+    padding-bottom: 5rem;
 }
 
 @media (min-width: 901px) {
@@ -1006,6 +1007,11 @@ td strong {
 
 /* ---- Footer ---- */
 footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
     background: var(--bg-alt);
     border-top: 1px solid var(--border);
     padding: 1.5rem;
