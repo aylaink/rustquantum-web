@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sources — RustQuantum</title>
-    <meta name="description" content="External references used by RustQuantum — constants, basis sets, validation data, and scientific libraries.">
+    <meta name="description" content="Primary citations behind RustQuantum — data sources, basis sets, ECPs, integral algorithms, and mathematical references.">
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
     <link rel="canonical" href="https://www.rustquantum.com/sources.html">
     <meta property="og:title" content="Sources — RustQuantum">
-    <meta property="og:description" content="External references used by RustQuantum.">
+    <meta property="og:description" content="Primary citations behind RustQuantum — 32 papers and databases grouped by domain.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.rustquantum.com/sources.html">
     <meta property="og:site_name" content="RustQuantum">
@@ -47,48 +47,252 @@
 
     <main id="main">
         <h1>Sources</h1>
-        <p class="lead">External references used across the pipeline.</p>
+        <p class="lead">Primary sources behind every constant, formula, and algorithm in the code.</p>
 
+        <details class="collapse">
+        <summary><h2 id="data-sources">Data sources</h2></summary>
         <div class="table-wrap">
         <table>
             <thead>
                 <tr>
-                    <th>Reference</th>
+                    <th>Source</th>
+                    <th>Use</th>
                     <th>Link</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Basis Set Exchange (BSE)</td>
-                    <td class="mono"><a href="https://www.basissetexchange.org">basissetexchange.org</a></td>
-                </tr>
-                <tr>
                     <td>CODATA 2022 (Bohr radius)</td>
+                    <td>a₀ for Å ↔ Bohr conversion</td>
                     <td class="mono"><a href="https://physics.nist.gov/cgi-bin/cuu/Value?bohrrada0">physics.nist.gov/cgi-bin/cuu/Value?bohrrada0</a></td>
                 </tr>
                 <tr>
                     <td>CODATA 2022 (Hartree, eV, …)</td>
+                    <td>Hartree → J, eV, kcal/mol, cm⁻¹, K, Hz</td>
                     <td class="mono"><a href="https://physics.nist.gov/cuu/Constants/">physics.nist.gov/cuu/Constants/</a></td>
                 </tr>
                 <tr>
                     <td>IUPAC / CIAAW 2024</td>
+                    <td>Atomic masses</td>
                     <td class="mono"><a href="https://www.ciaaw.org/atomic-weights.htm">ciaaw.org/atomic-weights.htm</a></td>
                 </tr>
                 <tr>
-                    <td>IUPAC periodic table</td>
-                    <td class="mono"><a href="https://www.iupac.org/what-we-do/periodic-table-of-elements/">iupac.org/what-we-do/periodic-table-of-elements/</a></td>
+                    <td>IUPAC 2024</td>
+                    <td>Element symbols and names (Z = 1–118)</td>
+                    <td class="mono"><a href="https://iupac.org/what-we-do/periodic-table-of-elements/">iupac.org/what-we-do/periodic-table-of-elements/</a></td>
                 </tr>
                 <tr>
-                    <td>Stuttgart / Bergner 1993</td>
-                    <td>DOI <a href="https://doi.org/10.1080/00268979300103121" class="mono">10.1080/00268979300103121</a> · <a href="https://www.tandfonline.com/doi/abs/10.1080/00268979300103121">Tandfonline</a> · <a href="https://ui.adsabs.harvard.edu/abs/1993MolPh..80.1431B/abstract">NASA ADS</a></td>
+                    <td>Basis Set Exchange (BSE)</td>
+                    <td>Exponents and coefficients of basis sets</td>
+                    <td class="mono"><a href="https://www.basissetexchange.org">basissetexchange.org</a></td>
                 </tr>
                 <tr>
-                    <td>Stuttgart PP database</td>
+                    <td>NIST CCCBDB</td>
+                    <td>Molecular geometries (bond lengths, angles)</td>
+                    <td class="mono"><a href="https://cccbdb.nist.gov/">cccbdb.nist.gov</a></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        </details>
+
+        <details class="collapse">
+        <summary><h2 id="basis-sets">Basis sets</h2></summary>
+        <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Source</th>
+                    <th>Basis / coverage</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Hehre, Stewart, Pople — <em>J. Chem. Phys.</em> <strong>51</strong>, 2657 (1969)</td>
+                    <td>STO-nG, H and He</td>
+                    <td class="mono"><a href="https://doi.org/10.1063/1.1672392">10.1063/1.1672392</a></td>
+                </tr>
+                <tr>
+                    <td>Hehre, Ditchfield, Stewart, Pople — <em>J. Chem. Phys.</em> <strong>52</strong>, 2769 (1970)</td>
+                    <td>STO-nG, Li–F</td>
+                    <td class="mono"><a href="https://doi.org/10.1063/1.1673374">10.1063/1.1673374</a></td>
+                </tr>
+                <tr>
+                    <td>Hehre, Ditchfield, Stewart, Pople — <em>J. Chem. Phys.</em> <strong>56</strong>, 2257 (1972)</td>
+                    <td>STO-nG, Na–Ar</td>
+                    <td class="mono"><a href="https://doi.org/10.1063/1.1677527">10.1063/1.1677527</a></td>
+                </tr>
+                <tr>
+                    <td>Ditchfield, Hehre, Pople — <em>J. Chem. Phys.</em> <strong>54</strong>, 724 (1971)</td>
+                    <td>6-31G base (H–Ne)</td>
+                    <td class="mono"><a href="https://doi.org/10.1063/1.1674902">10.1063/1.1674902</a></td>
+                </tr>
+                <tr>
+                    <td>Francl et al. — <em>J. Chem. Phys.</em> <strong>77</strong>, 3654 (1982)</td>
+                    <td>6-31G, 6-31G(d) for Na–Ar</td>
+                    <td class="mono"><a href="https://doi.org/10.1063/1.444267">10.1063/1.444267</a></td>
+                </tr>
+                <tr>
+                    <td>Rassolov, Ratner, Pople, Redfern — <em>J. Comput. Chem.</em> <strong>22</strong>, 976 (2001)</td>
+                    <td>6-31G for K–Kr</td>
+                    <td class="mono"><a href="https://doi.org/10.1002/jcc.1058">10.1002/jcc.1058</a></td>
+                </tr>
+                <tr>
+                    <td>Krishnan, Binkley, Seeger, Pople — <em>J. Chem. Phys.</em> <strong>72</strong>, 650 (1980)</td>
+                    <td>6-311G for H–Ne</td>
+                    <td class="mono"><a href="https://doi.org/10.1063/1.438955">10.1063/1.438955</a></td>
+                </tr>
+                <tr>
+                    <td>McLean, Chandler — <em>J. Chem. Phys.</em> <strong>72</strong>, 5639 (1980)</td>
+                    <td>6-311G for Na–Ar</td>
+                    <td class="mono"><a href="https://doi.org/10.1063/1.438980">10.1063/1.438980</a></td>
+                </tr>
+                <tr>
+                    <td>Hariharan, Pople — <em>Theor. Chim. Acta</em> <strong>28</strong>, 213 (1973)</td>
+                    <td>6-31G(d) first-row polarization</td>
+                    <td class="mono"><a href="https://doi.org/10.1007/BF00533485">10.1007/BF00533485</a></td>
+                </tr>
+                <tr>
+                    <td>Weigend, Ahlrichs — <em>Phys. Chem. Chem. Phys.</em> <strong>7</strong>, 3297 (2005)</td>
+                    <td>def2-SVP (Z = 1–86)</td>
+                    <td class="mono"><a href="https://doi.org/10.1039/B508541A">10.1039/B508541A</a></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        </details>
+
+        <details class="collapse">
+        <summary><h2 id="ecp">Effective Core Potentials (ECP)</h2></summary>
+        <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Source</th>
+                    <th>Use</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bergner, Dolg, Küchle, Stoll, Preuss — <em>Mol. Phys.</em> <strong>80</strong>, 1431 (1993)</td>
+                    <td>Stuttgart RLC parameters</td>
+                    <td class="mono"><a href="https://doi.org/10.1080/00268979300103121">10.1080/00268979300103121</a> · <a href="https://ui.adsabs.harvard.edu/abs/1993MolPh..80.1431B">NASA ADS</a></td>
+                </tr>
+                <tr>
+                    <td>Shaw, Hill — <em>J. Chem. Phys.</em> <strong>147</strong>, 074108 (2017)</td>
+                    <td>libecpint reference implementation</td>
+                    <td class="mono"><a href="https://doi.org/10.1063/1.4986887">10.1063/1.4986887</a></td>
+                </tr>
+                <tr>
+                    <td>Kahn, Baybutt, Truhlar — <em>J. Chem. Phys.</em> <strong>65</strong>, 3826 (1976)</td>
+                    <td>ECP semi-local projector + Bessel expansion</td>
+                    <td class="mono"><a href="https://pubs.aip.org/aip/jcp/article-abstract/65/10/3826/948277">pubs.aip.org/aip/jcp/article-abstract/65/10/3826/948277</a></td>
+                </tr>
+                <tr>
+                    <td>Cologne / Stuttgart PP database (Dolg, Stoll group)</td>
+                    <td>Future ECP-table extension (Z &gt; 36); not yet active</td>
                     <td class="mono"><a href="https://www.tc.uni-koeln.de/PP/clickpse.en.html">tc.uni-koeln.de/PP/clickpse.en.html</a></td>
                 </tr>
             </tbody>
         </table>
         </div>
+        </details>
+
+        <details class="collapse">
+        <summary><h2 id="molecular-integrals">Molecular integrals (algorithms)</h2></summary>
+        <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Source</th>
+                    <th>Use</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Obara, Saika — <em>J. Chem. Phys.</em> <strong>84</strong>, 3963 (1986)</td>
+                    <td>Overlap + kinetic recurrence</td>
+                    <td class="mono"><a href="https://doi.org/10.1063/1.450106">10.1063/1.450106</a></td>
+                </tr>
+                <tr>
+                    <td>McMurchie, Davidson — <em>J. Comput. Phys.</em> <strong>26</strong>, 218 (1978)</td>
+                    <td>E-coefficients, R-integrals, nuclear, ERI</td>
+                    <td class="mono"><a href="https://doi.org/10.1016/0021-9991(78)90092-X">10.1016/0021-9991(78)90092-X</a></td>
+                </tr>
+                <tr>
+                    <td>McMurchie, Davidson — <em>J. Comput. Phys.</em> <strong>44</strong>, 289 (1981)</td>
+                    <td>Closed-form ECP integrals</td>
+                    <td class="mono"><a href="https://doi.org/10.1016/0021-9991(81)90053-X">10.1016/0021-9991(81)90053-X</a></td>
+                </tr>
+                <tr>
+                    <td>Häser, Ahlrichs — <em>J. Comput. Chem.</em> <strong>10</strong>, 104 (1989)</td>
+                    <td>Schwarz screening</td>
+                    <td class="mono"><a href="https://doi.org/10.1002/jcc.540100111">10.1002/jcc.540100111</a></td>
+                </tr>
+                <tr>
+                    <td>Szabo, Ostlund — <em>Modern Quantum Chemistry</em>, Dover (1996), eq. 3.203</td>
+                    <td>Gaussian normalization</td>
+                    <td class="mono"><a href="https://store.doverpublications.com/products/9780486691862">store.doverpublications.com/products/9780486691862</a></td>
+                </tr>
+                <tr>
+                    <td>Helgaker, Jørgensen, Olsen — <em>Molecular Electronic-Structure Theory</em>, Wiley (2000), §9.13</td>
+                    <td>Bessel expansion, angular factorization</td>
+                    <td class="mono"><a href="https://onlinelibrary.wiley.com/doi/book/10.1002/9781119019572">10.1002/9781119019572</a></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        </details>
+
+        <details class="collapse">
+        <summary><h2 id="mathematics">Mathematics (special functions, quadrature)</h2></summary>
+        <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Source</th>
+                    <th>Use</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Abramowitz &amp; Stegun — <em>Handbook of Mathematical Functions</em>, NBS AMS-55 (1964)</td>
+                    <td>Γ (§6.1), erf (§7.1.26), Bessel (ch. 10)</td>
+                    <td class="mono"><a href="https://dlmf.nist.gov/">dlmf.nist.gov</a></td>
+                </tr>
+                <tr>
+                    <td>Lebedev, Laikov — <em>Doklady Mathematics</em> <strong>59</strong> (3), 477–481 (1999)</td>
+                    <td>Lebedev angular quadrature grids</td>
+                    <td class="mono"><a href="https://www.semanticscholar.org/paper/90517dc0937a017c115a85173a8e9bea04ec0fa5">semanticscholar.org</a></td>
+                </tr>
+                <tr>
+                    <td>Homeier, Steinborn — <em>J. Mol. Struct. THEOCHEM</em> <strong>368</strong>, 31 (1996)</td>
+                    <td>Cartesian → spherical harmonics</td>
+                    <td class="mono"><a href="https://doi.org/10.1016/S0166-1280(96)90531-X">10.1016/S0166-1280(96)90531-X</a></td>
+                </tr>
+                <tr>
+                    <td>Piessens, de Doncker, Überhuber, Kahaner — <em>QUADPACK</em>, Springer (1983)</td>
+                    <td>Gauss–Kronrod G7-K15 quadrature nodes</td>
+                    <td class="mono"><a href="https://doi.org/10.1007/978-3-642-61786-7">10.1007/978-3-642-61786-7</a></td>
+                </tr>
+                <tr>
+                    <td>Takahasi, Mori — <em>Publ. RIMS Kyoto Univ.</em> <strong>9</strong>, 721 (1974)</td>
+                    <td>Tanh-sinh (double-exponential) quadrature</td>
+                    <td class="mono"><a href="https://www.kurims.kyoto-u.ac.jp/~prims/">kurims.kyoto-u.ac.jp/~prims/</a></td>
+                </tr>
+                <tr>
+                    <td>Becke — <em>J. Chem. Phys.</em> <strong>88</strong>, 2547 (1988)</td>
+                    <td>Gauss–Chebyshev radial grid</td>
+                    <td class="mono"><a href="https://doi.org/10.1063/1.454033">10.1063/1.454033</a></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        </details>
     </main>
 
     <footer>
