@@ -645,13 +645,12 @@ pre code {
 }
 
 /* ---- Tables (validation) ---- */
-/* .table-wrap keeps the vertical spacing of the table but does NOT
-   contain horizontal overflow — wide tables push the body wider than
-   the viewport, so the browser shows the horizontal scrollbar at the
-   bottom of the window (visible at all times on desktop). Mobile
-   scrolls via touch. */
+/* .table-wrap contains horizontal overflow locally so the body stays
+   at viewport width on mobile (prevents auto-zoom-out). Wide tables
+   get their own horizontal scroll inside the wrap. */
 .table-wrap {
     margin: 1.5rem 0;
+    overflow-x: auto;
 }
 
 .table-wrap table {
