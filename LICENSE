@@ -1,0 +1,35 @@
+RustQuantumWeb
+Copyright (c) 2026 Ignacio López Rodríguez
+
+This work — the RustQuantumWeb site content, including HTML, CSS,
+editorial text, validation tables, and accompanying images — is
+licensed under the Creative Commons Attribution 4.0 International
+License (CC BY 4.0).
+
+You are free to:
+
+  - Share — copy and redistribute the material in any medium or format.
+  - Adapt — remix, transform, and build upon the material for any
+    purpose, even commercially.
+
+Under the following terms:
+
+  - Attribution — You must give appropriate credit to
+    "Ignacio López Rodríguez · RustQuantum (www.rustquantum.com)",
+    provide a link to this license, and indicate if changes were made.
+    You may do so in any reasonable manner, but not in any way that
+    suggests the licensor endorses you or your use.
+
+No additional restrictions — You may not apply legal terms or
+technological measures that legally restrict others from doing
+anything the license permits.
+
+Third-party components bundled or loaded by the site (fonts, KaTeX,
+analytics, external services, redistributed data) retain their own
+licenses as tracked in THIRD_PARTY_LICENSES.md.
+
+The RustQuantum software itself is licensed separately; see the
+LICENSE file in the RustQuantum source repository.
+
+Full license text: https://creativecommons.org/licenses/by/4.0/legalcode
+Human-readable summary: https://creativecommons.org/licenses/by/4.0/

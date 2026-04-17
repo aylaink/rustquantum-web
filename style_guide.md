@@ -1,4 +1,4 @@
-*© 2026 Ignacio Lopez Rodriguez · RustQuantum (www.rustquantum.com) · All Rights Reserved*
+*© 2026 Ignacio Lopez Rodriguez · RustQuantum (www.rustquantum.com) · Licensed under CC BY 4.0*
 
 *Doc v0.0.1 · 2026-04-16*
 
@@ -339,4 +339,4 @@ every internal link and `sitemap.xml` in the same commit.
 
 ──────────────────────────────────────────────────────────────────
 
-*© 2026 Ignacio Lopez Rodriguez · RustQuantum (www.rustquantum.com) · All Rights Reserved*
+*© 2026 Ignacio Lopez Rodriguez · RustQuantum (www.rustquantum.com) · Licensed under CC BY 4.0*

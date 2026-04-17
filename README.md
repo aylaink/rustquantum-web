@@ -1,4 +1,4 @@
-*© 2026 Ignacio Lopez Rodriguez · RustQuantum (www.rustquantum.com) · All Rights Reserved*
+*© 2026 Ignacio Lopez Rodriguez · RustQuantum (www.rustquantum.com) · Licensed under CC BY 4.0*
 
 *Doc v0.0.1 · 2026-04-16*
 
@@ -12,4 +12,4 @@ contact. Static HTML and CSS, no framework, no runtime dependencies.
 
 ---
 
-*© 2026 Ignacio Lopez Rodriguez · RustQuantum · All Rights Reserved*
+*© 2026 Ignacio Lopez Rodriguez · RustQuantum · Licensed under CC BY 4.0*
