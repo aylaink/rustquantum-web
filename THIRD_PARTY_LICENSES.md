@@ -19,8 +19,8 @@ Google Fonts.
 
 | Font            | Weights            | License (SPDX) | Source                                             |
 |:----------------|:-------------------|:---------------|:---------------------------------------------------|
-| Inter           | Regular, Bold      | OFL-1.1        | <https://rsms.me/inter/>                           |
-| JetBrains Mono  | Regular, Bold      | OFL-1.1        | <https://www.jetbrains.com/lp/mono/>               |
+| Inter           | Regular, Bold      | OFL-1.1        | <https://rsms.me/inter/>; license: [`assets/fonts/Inter-LICENSE.txt`](assets/fonts/Inter-LICENSE.txt)                           |
+| JetBrains Mono  | Regular, Bold      | OFL-1.1        | <https://www.jetbrains.com/lp/mono/>; license: [`assets/fonts/JetBrainsMono-OFL-LICENSE.txt`](assets/fonts/JetBrainsMono-OFL-LICENSE.txt)               |
 
 ## Bundled JavaScript and CSS libraries
 
@@ -29,8 +29,7 @@ math (`math.html`, `integrals.html`).
 
 | Library        | Version | License (SPDX) | Source                               |
 |:---------------|:--------|:---------------|:-------------------------------------|
-| KaTeX          | 0.16    | MIT            | <https://katex.org/>                 |
-| KaTeX fonts    | 0.16    | OFL-1.1        | bundled inside `assets/katex/fonts/` |
+| KaTeX          | 0.16    | MIT            | <https://katex.org/>; license: [`assets/katex/LICENSE`](assets/katex/LICENSE) (covers the KaTeX_* fonts under `assets/katex/fonts/` via the umbrella distribution) |
 
 ## External runtime services
 
@@ -72,12 +71,16 @@ reproducible with attribution. Attribution is given through
 
 ## License texts
 
-Full license text for each bundled font and library lives in the
-component's own distribution; the SPDX identifier above is sufficient
-to locate the exact wording. A local snapshot is not kept in this
-repository. If the site ever bundles additional vendored assets,
-copies of their `LICENSE` files should be added under a future
-`licenses/` directory.
+Verbatim license texts for each bundled component are shipped alongside
+the component in the repository:
+
+- [`assets/fonts/Inter-LICENSE.txt`](assets/fonts/Inter-LICENSE.txt) — SIL OFL-1.1 for Inter.
+- [`assets/fonts/JetBrainsMono-OFL-LICENSE.txt`](assets/fonts/JetBrainsMono-OFL-LICENSE.txt) — SIL OFL-1.1 for JetBrains Mono.
+- [`assets/katex/LICENSE`](assets/katex/LICENSE) — MIT for KaTeX (covers the bundled `KaTeX_*` fonts under the same umbrella distribution).
+
+Each file is a verbatim copy of the upstream `LICENSE` / `OFL.txt` at
+the time of vendoring; when bumping a component version, replace the
+local copy with the upstream one from the new release.
 
 ## Scientific publications and external references
 

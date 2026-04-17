@@ -981,13 +981,13 @@ td strong {
 .cookie-banner .accept {
     background: var(--accent);
     border-color: var(--accent);
-    color: #fff;
+    color: var(--bg);
 }
 
 .cookie-banner .accept:hover {
     background: var(--accent-soft);
     border-color: var(--accent-soft);
-    color: #fff;
+    color: var(--bg);
 }
 
 /* ---- Footer ---- */

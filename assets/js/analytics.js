@@ -1,55 +1,51 @@
-// Google Analytics 4 with GDPR-compliant Consent Mode v2.
-//
-// Default: analytics_storage = 'denied' — gtag.js loads but no tracking
-// cookies are set and no user data is sent until the visitor clicks
-// "Accept" in the cookie banner.
+// Strict consent: gtag.js is loaded only after the visitor clicks Accept.
+// No Google script is fetched before consent, satisfying AEPD's strict
+// interpretation of LSSI-CE Art. 22 (consent required before loading
+// non-essential third-party scripts, not just before setting cookies).
 //
 // Visitor choice (granted / denied) is persisted in localStorage so the
 // banner appears only on first visit; subsequent visits respect the
-// previous decision without prompting.
+// previous decision without prompting and without loading gtag.js.
 
 const GA_ID = 'G-RKXTH8PTT5';
 const STORAGE_KEY = 'rq-consent';
 
-window.dataLayer = window.dataLayer || [];
-function gtag() { dataLayer.push(arguments); }
+let gtagLoaded = false;
 
-// Defaults — everything denied. wait_for_update gives the user 500 ms
-// to click before the first page-view fires (granted or denied).
-gtag('consent', 'default', {
-    ad_storage:           'denied',
-    ad_user_data:         'denied',
-    ad_personalization:   'denied',
-    analytics_storage:    'denied',
-    wait_for_update:      500
-});
+function loadGtag() {
+    if (gtagLoaded) return;
+    gtagLoaded = true;
 
-// Load gtag.js — respects the consent state set above.
-const gtagScript = document.createElement('script');
-gtagScript.async = true;
-gtagScript.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
-document.head.appendChild(gtagScript);
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    window.gtag = gtag;
 
-gtag('js', new Date());
-gtag('config', GA_ID, { anonymize_ip: true });
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+    document.head.appendChild(script);
+
+    gtag('js', new Date());
+    gtag('config', GA_ID, { anonymize_ip: true });
+}
+
+function grant() {
+    try { localStorage.setItem(STORAGE_KEY, 'granted'); } catch (e) {}
+    loadGtag();
+}
+
+function deny() {
+    try { localStorage.setItem(STORAGE_KEY, 'denied'); } catch (e) {}
+}
 
 // Restore previous decision, if any.
 let stored = null;
 try { stored = localStorage.getItem(STORAGE_KEY); } catch (e) { /* private mode */ }
 
 if (stored === 'granted') {
-    grant();
+    loadGtag();
 } else if (stored !== 'denied') {
     showBanner();
-}
-
-function grant() {
-    gtag('consent', 'update', { analytics_storage: 'granted' });
-    try { localStorage.setItem(STORAGE_KEY, 'granted'); } catch (e) {}
-}
-
-function deny() {
-    try { localStorage.setItem(STORAGE_KEY, 'denied'); } catch (e) {}
 }
 
 function showBanner() {
