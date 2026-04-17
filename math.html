@@ -123,6 +123,81 @@
 
         </details>
 
+        <details class="collapse">
+        <summary><h2 id="bessel">Modified Spherical Bessel</h2></summary>
+
+        <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>l</th>
+                    <th>x</th>
+                    <th>RQ</th>
+                    <th>SciPy</th>
+                    <th>Rel. diff</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td class="mono">0</td>  <td class="mono">0.1000</td>   <td class="mono">1.00166750019844e0</td>   <td class="mono">1.00166750019844e0</td>   <td class="mono">0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td class="mono">2</td>  <td class="mono">0.1000</td>   <td class="mono">6.67142989438033e-4</td>  <td class="mono">6.67142989438033e-4</td>  <td class="mono">0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td class="mono">5</td>  <td class="mono">0.1000</td>   <td class="mono">9.62371024043737e-10</td> <td class="mono">9.62371024043737e-10</td> <td class="mono">0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td class="mono">0</td>  <td class="mono">0.5000</td>   <td class="mono">1.04219061098749e0</td>   <td class="mono">1.04219061098749e0</td>   <td class="mono">0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td class="mono">2</td>  <td class="mono">0.5000</td>   <td class="mono">1.69663603608620e-2</td>  <td class="mono">1.69663603608620e-2</td>  <td class="mono">0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td class="mono">5</td>  <td class="mono">0.5000</td>   <td class="mono">3.03528002367718e-6</td>  <td class="mono">3.03528002367718e-6</td>  <td class="mono">0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td class="mono">0</td>  <td class="mono">1.0000</td>   <td class="mono">1.17520119364380e0</td>   <td class="mono">1.17520119364380e0</td>   <td class="mono">0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td class="mono">1</td>  <td class="mono">1.0000</td>   <td class="mono">3.67879441171442e-1</td>  <td class="mono">3.67879441171442e-1</td>  <td class="mono">0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td class="mono">0</td>  <td class="mono">2.0000</td>   <td class="mono">1.81343020392351e0</td>   <td class="mono">1.81343020392351e0</td>   <td class="mono">0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td class="mono">2</td>  <td class="mono">2.0000</td>   <td class="mono">3.51856088553418e-1</td>  <td class="mono">3.51856088553418e-1</td>  <td class="mono">0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td class="mono">0</td>  <td class="mono">5.0000</td>   <td class="mono">1.48406421155578e1</td>   <td class="mono">1.48406421155578e1</td>   <td class="mono">0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td class="mono">3</td>  <td class="mono">5.0000</td>   <td class="mono">4.15753593539588e0</td>   <td class="mono">4.15753593539588e0</td>   <td class="mono">0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td class="mono">0</td>  <td class="mono">10.0000</td>  <td class="mono">1.10132328747034e3</td>   <td class="mono">1.10132328747034e3</td>   <td class="mono">0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td class="mono">5</td>  <td class="mono">10.0000</td>  <td class="mono">2.36839582706511e2</td>   <td class="mono">2.36839582706511e2</td>   <td class="mono">0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td class="mono">10</td> <td class="mono">1.0000</td>   <td class="mono">7.43279354909482e-11</td> <td class="mono">7.43279354909483e-11</td> <td class="mono">1.3e-15</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td class="mono">20</td> <td class="mono">1.0000</td>   <td class="mono">7.71514756506563e-26</td> <td class="mono">7.71514756506564e-26</td> <td class="mono">1.3e-15</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td class="mono">0</td>  <td class="mono">50.0000</td>  <td class="mono">5.18470552858707e19</td>  <td class="mono">5.18470552858707e19</td>  <td class="mono">0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td class="mono">0</td>  <td class="mono">100.0000</td> <td class="mono">1.34405857090807e41</td>  <td class="mono">1.34405857090807e41</td>  <td class="mono">0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td class="mono">0</td>  <td class="mono">500.0000</td> <td class="mono">1.40359221785284e214</td> <td class="mono">1.40359221785284e214</td> <td class="mono">0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+            </tbody>
+        </table>
+        </div>
+        </details>
+
+        <details class="collapse">
+        <summary><h2 id="bessel-scaled">Modified Spherical Bessel (scaled)</h2></summary>
+
+        <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>l</th>
+                    <th>x</th>
+                    <th>RQ</th>
+                    <th>SciPy</th>
+                    <th>Rel. diff</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td class="mono">0</td>  <td class="mono">0.1000</td>    <td class="mono">9.06346234610090e-1</td> <td class="mono">9.06346234610091e-1</td> <td class="mono">1.1e-15</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td class="mono">3</td>  <td class="mono">0.1000</td>    <td class="mono">8.62228780716401e-6</td> <td class="mono">8.62228780716403e-6</td> <td class="mono">2.3e-15</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td class="mono">0</td>  <td class="mono">1.0000</td>    <td class="mono">4.32332358381694e-1</td> <td class="mono">4.32332358381694e-1</td> <td class="mono">0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td class="mono">5</td>  <td class="mono">1.0000</td>    <td class="mono">3.67741027269972e-5</td> <td class="mono">3.67741027269972e-5</td> <td class="mono">0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td class="mono">0</td>  <td class="mono">10.0000</td>   <td class="mono">4.99999998969423e-2</td> <td class="mono">4.99999998969424e-2</td> <td class="mono">2.0e-15</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td class="mono">4</td>  <td class="mono">10.0000</td>   <td class="mono">1.77749997356055e-2</td> <td class="mono">1.77749997356056e-2</td> <td class="mono">5.6e-15</td> <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td class="mono">10</td> <td class="mono">10.0000</td>   <td class="mono">2.48089807250104e-4</td> <td class="mono">2.48089807249928e-4</td> <td class="mono">7.1e-13</td> <td><span class="badge badge-ok">Near</span></td></tr>
+                <tr><td class="mono">0</td>  <td class="mono">100.0000</td>  <td class="mono">5.00000000000000e-3</td> <td class="mono">5.00000000000000e-3</td> <td class="mono">0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td class="mono">5</td>  <td class="mono">100.0000</td>  <td class="mono">4.30044677750000e-3</td> <td class="mono">4.30044677750000e-3</td> <td class="mono">0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td class="mono">10</td> <td class="mono">100.0000</td>  <td class="mono">2.87823698423650e-3</td> <td class="mono">2.87823698423650e-3</td> <td class="mono">0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td class="mono">0</td>  <td class="mono">500.0000</td>  <td class="mono">1.00000000000000e-3</td> <td class="mono">1.00000000000000e-3</td> <td class="mono">0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td class="mono">5</td>  <td class="mono">500.0000</td>  <td class="mono">9.70416655089760e-4</td> <td class="mono">9.70416655089760e-4</td> <td class="mono">0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td class="mono">0</td>  <td class="mono">1000.0000</td> <td class="mono">5.00000000000000e-4</td> <td class="mono">5.00000000000000e-4</td> <td class="mono">0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+                <tr><td class="mono">10</td> <td class="mono">1000.0000</td> <td class="mono">4.73229786247996e-4</td> <td class="mono">4.73229786247996e-4</td> <td class="mono">0</td>       <td><span class="badge badge-exact">Exact</span></td></tr>
+            </tbody>
+        </table>
+        </div>
+        </details>
+
         <nav class="prev-next" aria-label="Pipeline navigation">
             <a href="basis.html" class="prev">
                 <span class="direction">← Previous</span>
