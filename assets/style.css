@@ -71,7 +71,7 @@ body {
     color: var(--text);
     font-family: var(--sans);
     line-height: 1.65;
-    min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
     padding-top: 7rem;
