@@ -413,7 +413,7 @@ p.lead {
 .nav-dropdown ul {
     position: absolute;
     top: 100%;
-    right: 0;
+    left: 0;
     margin-top: 0.55rem;
     background: var(--panel);
     border: 1px solid var(--border);
