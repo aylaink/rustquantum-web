@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCI — RustQuantum</title>
+    <meta name="description" content="FCI benchmarks for RustQuantum.">
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+    <link rel="canonical" href="https://www.rustquantum.com/benchmarks/fci.html">
+    <meta property="og:title" content="FCI — RustQuantum">
+    <meta property="og:description" content="FCI benchmarks for RustQuantum.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.rustquantum.com/benchmarks/fci.html">
+    <meta property="og:site_name" content="RustQuantum">
+    <meta property="og:image" content="https://www.rustquantum.com/assets/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="RustQuantum — a molecular quantum simulator in Rust">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preload" href="../assets/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../assets/fonts/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../assets/fonts/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../assets/fonts/JetBrainsMono-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../assets/style.css">
+    <script type="module" src="../assets/js/analytics.js"></script>
+    <script type="module" src="../assets/js/nav-dropdown.js"></script>
+    <script type="module" src="../assets/js/table-fit.js"></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header>
+        <div class="header-inner">
+            <a class="brand" href="../index.html"><span class="dot"></span>RustQuantum</a>
+            <nav>
+                <ul>
+                    <li>
+                        <details class="nav-dropdown">
+                        <summary>Pipeline</summary>
+                        <ul>
+                        <li><a href="../fci.html">FCI</a></li>
+                        <li><a href="../constants.html">Constants</a></li>
+                        <li><a href="../molecule.html">Molecule</a></li>
+                        <li><a href="../math.html">Math</a></li>
+                        <li><a href="../basis.html">Basis</a></li>
+                        <li><a href="../integrals.html">Integrals</a></li>
+                        <li><a href="../scf.html">SCF</a></li>
+                        <li><a href="../hamiltonian.html">Hamiltonian</a></li>
+                        <li><a href="../fermion.html">Fermion</a></li>
+                        <li><a href="../circuit.html">Circuit</a></li>
+                        <li><a href="../vqe.html">VQE</a></li>
+                        </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details class="nav-dropdown">
+                        <summary>Benchmarks</summary>
+                        <ul>
+                        <li><a href="hardware.html">Hardware</a></li>
+                        <li><a href="fci.html" class="active" aria-current="page">FCI</a></li>
+                        </ul>
+                        </details>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <h1>FCI</h1>
+        <p class="lead">Dense diagonalization benchmarks of the Jordan-Wigner qubit Hamiltonian.</p>
+
+        <h3>H₂O matrix diagonalization</h3>
+
+        <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Backend</th>
+                    <th>Cores</th>
+                    <th>Threads</th>
+                    <th>E_FCI [Ha]</th>
+                    <th>Total [s]</th>
+                    <th>Speedup vs 1-core</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>CPU</strong></td> <td class="mono">1</td>  <td class="mono">1</td>  <td class="mono">−75.012736</td> <td class="mono">547.834</td> <td class="mono">1.00×</td></tr>
+                <tr><td><strong>CPU</strong></td> <td class="mono">8</td>  <td class="mono">16</td> <td class="mono">−75.012736</td> <td class="mono">235.177</td> <td class="mono">2.33×</td></tr>
+                <tr><td><strong>CPU</strong></td> <td class="mono">16</td> <td class="mono">32</td> <td class="mono">−75.012736</td> <td class="mono">216.361</td> <td class="mono">2.53×</td></tr>
+                <tr><td><strong>GPU</strong></td> <td class="mono">—</td> <td class="mono">—</td> <td class="mono">−75.012736</td> <td class="mono">29.498</td>  <td class="mono">18.62×</td></tr>
+            </tbody>
+        </table>
+        </div>
+
+        <nav class="prev-next" aria-label="Benchmarks navigation">
+            <a href="hardware.html" class="prev">
+                <span class="direction">← Previous</span>
+                Hardware
+            </a>
+        </nav>
+    </main>
+
+    <footer>
+        © 2026 Ignacio Lopez Rodriguez · RustQuantum · Personal learning project · <a href="../contact.html">Contact</a> · <a href="../sources.html">Sources</a> · <a href="../legal/privacy.html">Privacy</a> · <a href="../legal/terms.html">Terms</a> · <a href="../legal/license.html">License</a> · <a href="../legal/third-party.html">Credits</a> · <a href="../legal/cookies.html">Cookies</a>
+    </footer>
+</body>
+</html>
