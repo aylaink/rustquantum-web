@@ -407,14 +407,36 @@ p.lead {
     background: var(--panel);
     border: 1px solid var(--border);
     border-radius: 6px;
-    padding: 0.85rem 1.1rem;
+    padding: 0.4rem 0;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 0.6rem;
+    align-items: stretch;
+    gap: 0;
     min-width: 11rem;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
     z-index: 20;
+}
+
+.nav-dropdown ul li {
+    display: block;
+}
+
+.nav-dropdown ul a {
+    display: block;
+    padding: 0.45rem 1.1rem;
+    border-bottom: none;
+    color: var(--text-dim);
+}
+
+.nav-dropdown ul a:hover,
+.nav-dropdown ul a.active {
+    color: var(--text);
+    background: var(--bg-alt);
+    border-bottom: none;
+}
+
+.nav-dropdown ul a.active {
+    box-shadow: inset 2px 0 0 var(--accent);
 }
 
 /* ---- Heading anchors (hover reveals #) ---- */
