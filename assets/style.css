@@ -169,9 +169,8 @@ header {
     padding: 1rem 1.5rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1.75rem;
 }
 
 .brand {
@@ -181,6 +180,11 @@ header {
     font-family: var(--mono);
     font-weight: 700;
     font-size: 1.1rem;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.brand:hover {
     color: var(--text);
 }
 
@@ -195,6 +199,7 @@ header {
 nav ul {
     list-style: none;
     display: flex;
+    align-items: center;
     gap: 1.25rem;
     flex-wrap: wrap;
     font-family: var(--mono);
@@ -351,6 +356,65 @@ p.lead {
 
 .collapse summary:hover::after {
     color: var(--accent-soft);
+}
+
+/* ---- Header nav dropdown ---- */
+.nav-dropdown {
+    position: relative;
+    margin: 0;
+}
+
+.nav-dropdown > summary {
+    cursor: pointer;
+    list-style: none;
+    color: var(--text-dim);
+    padding: 0.3rem 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s ease, border-color 0.15s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.nav-dropdown > summary::-webkit-details-marker {
+    display: none;
+}
+
+.nav-dropdown > summary::after {
+    content: '▾';
+    color: var(--accent);
+    font-size: 0.85em;
+    line-height: 1;
+    transition: transform 0.15s ease;
+}
+
+.nav-dropdown[open] > summary::after {
+    transform: rotate(180deg);
+}
+
+.nav-dropdown[open] > summary,
+.nav-dropdown > summary:hover,
+.nav-dropdown:has(.active) > summary {
+    color: var(--text);
+    border-bottom-color: var(--accent);
+}
+
+.nav-dropdown ul {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 0.55rem;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.85rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+    min-width: 11rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+    z-index: 20;
 }
 
 /* ---- Heading anchors (hover reveals #) ---- */

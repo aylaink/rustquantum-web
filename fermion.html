@@ -24,27 +24,35 @@
     <link rel="preload" href="assets/fonts/JetBrainsMono-Bold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="assets/style.css">
     <script type="module" src="assets/js/analytics.js"></script>
+    <script type="module" src="assets/js/nav-dropdown.js"></script>
     <script type="module" src="assets/js/table-fit.js"></script>
 </head>
 <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header>
         <div class="header-inner">
-            <div class="brand"><span class="dot"></span>RustQuantum</div>
+            <a class="brand" href="index.html"><span class="dot"></span>RustQuantum</a>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="constants.html">Constants</a></li>
-                    <li><a href="molecule.html">Molecule</a></li>
-                    <li><a href="math.html">Math</a></li>
-                    <li><a href="basis.html">Basis</a></li>
-                    <li><a href="integrals.html">Integrals</a></li>
-                    <li><a href="scf.html">SCF</a></li>
-                    <li><a href="hamiltonian.html">Hamiltonian</a></li>
-                    <li><a href="fermion.html" class="active" aria-current="page">Fermion</a></li>
-                    <li><a href="circuit.html">Circuit</a></li>
-                    <li><a href="vqe.html">VQE</a></li>
-                    <li><a href="fci.html">FCI</a></li>
+                    <li>
+                        <details class="nav-dropdown">
+                        <summary>Pipeline</summary>
+                        <ul>
+                        <li><a href="constants.html">Constants</a></li>
+                        <li><a href="molecule.html">Molecule</a></li>
+                        <li><a href="math.html">Math</a></li>
+                        <li><a href="basis.html">Basis</a></li>
+                        <li><a href="integrals.html">Integrals</a></li>
+                        <li><a href="scf.html">SCF</a></li>
+                        <li><a href="hamiltonian.html">Hamiltonian</a></li>
+                        <li><a href="fermion.html" class="active" aria-current="page">Fermion</a></li>
+                        <li><a href="circuit.html">Circuit</a></li>
+                        <li><a href="vqe.html">VQE</a></li>
+                        <li><a href="fci.html">FCI</a></li>
+                        </ul>
+                        </details>
+                    </li>
+                
                 </ul>
             </nav>
         </div>
