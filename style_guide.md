@@ -287,8 +287,12 @@ RustQuantumWeb/
 ├── basis.html               │
 ├── math.html                │  Pipeline stages (root, short URLs)
 ├── integrals.html           │  Order matches the validation flow.
-├── core_treatment.html      │
-├── scf.html                 ┘
+├── scf.html                 │
+├── hamiltonian.html         │
+├── fermion.html             │
+├── circuit.html             │
+├── vqe.html                 │
+├── fci.html                 ┘
 ├── contact.html             ← cross-site, lives at root
 ├── reports/                 ← validation reports (one file per experiment) — empty for now
 ├── legal/                   ← legal / policy pages

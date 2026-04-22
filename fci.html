@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Core Treatment — RustQuantum</title>
-    <meta name="description" content="Effective Core Potentials (Stuttgart RLC) — parameters, angular and radial kernels for heavy-atom treatment in RustQuantum.">
+    <title>FCI — RustQuantum</title>
+    <meta name="description" content="Dense-matrix FCI via Jordan-Wigner qubit Hamiltonian in RustQuantum.">
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-    <link rel="canonical" href="https://www.rustquantum.com/core_treatment.html">
-    <meta property="og:title" content="Core Treatment — RustQuantum">
-    <meta property="og:description" content="Effective Core Potentials (Stuttgart RLC) — parameters, angular and radial kernels.">
+    <link rel="canonical" href="https://www.rustquantum.com/fci.html">
+    <meta property="og:title" content="FCI — RustQuantum">
+    <meta property="og:description" content="Dense-matrix FCI via Jordan-Wigner qubit Hamiltonian.">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://www.rustquantum.com/core_treatment.html">
+    <meta property="og:url" content="https://www.rustquantum.com/fci.html">
     <meta property="og:site_name" content="RustQuantum">
     <meta property="og:image" content="https://www.rustquantum.com/assets/og-image.png">
     <meta property="og:image:width" content="1200">
@@ -39,26 +39,29 @@
                     <li><a href="math.html">Math</a></li>
                     <li><a href="basis.html">Basis</a></li>
                     <li><a href="integrals.html">Integrals</a></li>
-                    <li><a href="core_treatment.html" class="active" aria-current="page">Core Treatment</a></li>
                     <li><a href="scf.html">SCF</a></li>
+                    <li><a href="hamiltonian.html">Hamiltonian</a></li>
+                    <li><a href="fermion.html">Fermion</a></li>
+                    <li><a href="circuit.html">Circuit</a></li>
+                    <li><a href="vqe.html">VQE</a></li>
+                    <li><a href="fci.html" class="active" aria-current="page">FCI</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main id="main">
-        <h1>Core Treatment</h1>
-        <p class="lead">RustQuantum supports different strategies to handle core electrons.</p>
+        <h1>Full Configuration Interaction</h1>
+        <p class="lead">RustQuantum computes FCI by dense diagonalization.</p>
 
+        <details class="collapse">
+        <summary><h2 id="fci">Full Configuration Interaction</h2></summary>
+        </details>
 
         <nav class="prev-next" aria-label="Pipeline navigation">
-            <a href="integrals.html" class="prev">
+            <a href="vqe.html" class="prev">
                 <span class="direction">← Previous</span>
-                Integrals
-            </a>
-            <a href="scf.html" class="next">
-                <span class="direction">Next →</span>
-                SCF
+                VQE
             </a>
         </nav>
     </main>

@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Integrals — RustQuantum</title>
-    <meta name="description" content="Overlap, kinetic, nuclear attraction, two-electron repulsion integrals, and the Boys function — validated against PySCF.">
+    <title>VQE — RustQuantum</title>
+    <meta name="description" content="Qubit-ADAPT VQE, Pauli rotations, L-BFGS optimizer in RustQuantum.">
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-    <link rel="canonical" href="https://www.rustquantum.com/integrals.html">
-    <meta property="og:title" content="Integrals — RustQuantum">
-    <meta property="og:description" content="Overlap, kinetic, nuclear attraction, ERIs, and the Boys function, validated against PySCF.">
+    <link rel="canonical" href="https://www.rustquantum.com/vqe.html">
+    <meta property="og:title" content="VQE — RustQuantum">
+    <meta property="og:description" content="Qubit-ADAPT VQE, Pauli rotations, L-BFGS optimizer.">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://www.rustquantum.com/integrals.html">
+    <meta property="og:url" content="https://www.rustquantum.com/vqe.html">
     <meta property="og:site_name" content="RustQuantum">
     <meta property="og:image" content="https://www.rustquantum.com/assets/og-image.png">
     <meta property="og:image:width" content="1200">
@@ -25,10 +25,6 @@
     <link rel="stylesheet" href="assets/style.css">
     <script type="module" src="assets/js/analytics.js"></script>
     <script type="module" src="assets/js/table-fit.js"></script>
-    <link rel="stylesheet" href="assets/katex/katex.min.css">
-    <script defer src="assets/katex/katex.min.js"></script>
-    <script defer src="assets/katex/contrib/auto-render.min.js"></script>
-    <script type="module" src="assets/js/math-render.js"></script>
 </head>
 <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -42,12 +38,12 @@
                     <li><a href="molecule.html">Molecule</a></li>
                     <li><a href="math.html">Math</a></li>
                     <li><a href="basis.html">Basis</a></li>
-                    <li><a href="integrals.html" class="active" aria-current="page">Integrals</a></li>
+                    <li><a href="integrals.html">Integrals</a></li>
                     <li><a href="scf.html">SCF</a></li>
                     <li><a href="hamiltonian.html">Hamiltonian</a></li>
                     <li><a href="fermion.html">Fermion</a></li>
                     <li><a href="circuit.html">Circuit</a></li>
-                    <li><a href="vqe.html">VQE</a></li>
+                    <li><a href="vqe.html" class="active" aria-current="page">VQE</a></li>
                     <li><a href="fci.html">FCI</a></li>
                 </ul>
             </nav>
@@ -55,45 +51,37 @@
     </header>
 
     <main id="main">
-        <h1>Integrals</h1>
-        <p class="lead">RustQuantum evaluates the fundamental integrals.</p>
+        <h1>Variational Quantum Eigensolver</h1>
+        <p class="lead">RustQuantum runs VQE with Qubit-ADAPT and L-BFGS.</p>
 
         <details class="collapse">
-        <summary><h2 id="boys">Boys Function</h2></summary>
+        <summary><h2 id="ansatz">Ansatz</h2></summary>
         </details>
 
         <details class="collapse">
-        <summary><h2 id="overlap">Overlap</h2></summary>
+        <summary><h2 id="pauli-rotations">Pauli Rotations</h2></summary>
         </details>
 
         <details class="collapse">
-        <summary><h2 id="kinetic">Kinetic</h2></summary>
+        <summary><h2 id="qubit-adapt">Qubit-ADAPT</h2></summary>
         </details>
 
         <details class="collapse">
-        <summary><h2 id="nuclear-attraction">Nuclear Attraction</h2></summary>
+        <summary><h2 id="optimizer">Optimizer</h2></summary>
         </details>
 
         <details class="collapse">
-        <summary><h2 id="eri">Electron Repulsion (ERI)</h2></summary>
-        </details>
-
-        <details class="collapse">
-        <summary><h2 id="schwarz">Schwarz Screening</h2></summary>
-        </details>
-
-        <details class="collapse">
-        <summary><h2 id="eri-tensor">ERI Tensor</h2></summary>
+        <summary><h2 id="polish">Polish</h2></summary>
         </details>
 
         <nav class="prev-next" aria-label="Pipeline navigation">
-            <a href="basis.html" class="prev">
+            <a href="circuit.html" class="prev">
                 <span class="direction">← Previous</span>
-                Basis
+                Circuit
             </a>
-            <a href="scf.html" class="next">
+            <a href="fci.html" class="next">
                 <span class="direction">Next →</span>
-                SCF
+                FCI
             </a>
         </nav>
     </main>
