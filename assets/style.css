@@ -213,6 +213,17 @@ nav a {
     transition: color 0.15s ease, border-color 0.15s ease;
 }
 
+/* Top-level nav items (direct children of the header nav) share box model
+   so Pipeline (details/summary) and sibling links (Benchmarks, etc.) line
+   up at identical height and font size. */
+nav > ul > li > a,
+nav > ul > li > details > summary {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
 nav a:hover,
 nav a.active {
     color: var(--text);

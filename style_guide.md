@@ -293,6 +293,7 @@ RustQuantumWeb/
 ├── circuit.html             │
 ├── vqe.html                 │
 ├── fci.html                 ┘
+├── benchmarks.html          ← performance measurements, sibling of pipeline
 ├── contact.html             ← cross-site, lives at root
 ├── reports/                 ← validation reports (one file per experiment) — empty for now
 ├── legal/                   ← legal / policy pages
