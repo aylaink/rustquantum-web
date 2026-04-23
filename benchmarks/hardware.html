@@ -26,6 +26,35 @@
     <script type="module" src="../assets/js/analytics.js"></script>
     <script type="module" src="../assets/js/nav-dropdown.js"></script>
     <script type="module" src="../assets/js/table-fit.js"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://www.rustquantum.com/#website",
+          "url": "https://www.rustquantum.com/",
+          "name": "RustQuantum",
+          "description": "Molecular quantum simulator written in Rust.",
+          "publisher": {"@id": "https://www.rustquantum.com/#person"},
+          "inLanguage": "en"
+        },
+        {
+          "@type": "Person",
+          "@id": "https://www.rustquantum.com/#person",
+          "name": "Ignacio López Rodríguez",
+          "url": "https://www.rustquantum.com/contact.html"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.rustquantum.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Environment", "item": "https://www.rustquantum.com/benchmarks/hardware.html"}
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
 <body class="pipeline">
     <a class="skip-link" href="#main">Skip to content</a>
@@ -76,14 +105,15 @@
 
         <div class="table-wrap">
         <table style="table-layout: fixed;">
+            <caption class="sr-only">Reference hardware used for all RustQuantum benchmarks (CPU, GPU, RAM).</caption>
             <colgroup>
                 <col style="width: 30%">
                 <col>
             </colgroup>
             <thead>
                 <tr>
-                    <th>Component</th>
-                    <th>Value</th>
+                    <th scope="col">Component</th>
+                    <th scope="col">Value</th>
                 </tr>
             </thead>
             <tbody>
@@ -101,14 +131,15 @@
 
         <div class="table-wrap">
         <table style="table-layout: fixed;">
+            <caption class="sr-only">Reference software stack used for all RustQuantum benchmarks (OS, language, floating-point precision).</caption>
             <colgroup>
                 <col style="width: 30%">
                 <col>
             </colgroup>
             <thead>
                 <tr>
-                    <th>Component</th>
-                    <th>Value</th>
+                    <th scope="col">Component</th>
+                    <th scope="col">Value</th>
                 </tr>
             </thead>
             <tbody>
@@ -129,7 +160,7 @@
     </main>
 
     <footer>
-        © 2026 Ignacio Lopez Rodriguez · RustQuantum · Personal learning project · <a href="../contact.html">Contact</a> · <a href="../sources.html">Sources</a> · <a href="../legal/privacy.html">Privacy</a> · <a href="../legal/terms.html">Terms</a> · <a href="../legal/license.html">License</a> · <a href="../legal/third-party.html">Credits</a> · <a href="../legal/cookies.html">Cookies</a>
+        © 2026 Ignacio López Rodríguez · RustQuantum · Personal learning project · <a href="../contact.html">Contact</a> · <a href="../sources.html">Sources</a> · <a href="../legal/privacy.html">Privacy</a> · <a href="../legal/terms.html">Terms</a> · <a href="../legal/license.html">License</a> · <a href="../legal/third-party.html">Credits</a> · <a href="../legal/cookies.html">Cookies</a>
     </footer>
 </body>
 </html>

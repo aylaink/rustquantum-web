@@ -26,6 +26,35 @@
     <script type="module" src="assets/js/analytics.js"></script>
     <script type="module" src="assets/js/nav-dropdown.js"></script>
     <script type="module" src="assets/js/table-fit.js"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://www.rustquantum.com/#website",
+          "url": "https://www.rustquantum.com/",
+          "name": "RustQuantum",
+          "description": "Molecular quantum simulator written in Rust.",
+          "publisher": {"@id": "https://www.rustquantum.com/#person"},
+          "inLanguage": "en"
+        },
+        {
+          "@type": "Person",
+          "@id": "https://www.rustquantum.com/#person",
+          "name": "Ignacio López Rodríguez",
+          "url": "https://www.rustquantum.com/contact.html"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.rustquantum.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Sources", "item": "https://www.rustquantum.com/sources.html"}
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -76,11 +105,12 @@
         <summary><h2 id="data-sources">Data sources</h2></summary>
         <div class="table-wrap">
         <table>
+            <caption class="sr-only">Data sources: physical constants, atomic masses, basis sets, and molecular geometries.</caption>
             <thead>
                 <tr>
-                    <th>Source</th>
-                    <th>Use</th>
-                    <th>Link</th>
+                    <th scope="col">Source</th>
+                    <th scope="col">Use</th>
+                    <th scope="col">Link</th>
                 </tr>
             </thead>
             <tbody>
@@ -123,11 +153,12 @@
         <summary><h2 id="basis-sets">Basis sets</h2></summary>
         <div class="table-wrap">
         <table>
+            <caption class="sr-only">Primary references for the Gaussian basis sets implemented in RustQuantum.</caption>
             <thead>
                 <tr>
-                    <th>Source</th>
-                    <th>Basis / coverage</th>
-                    <th>Link</th>
+                    <th scope="col">Source</th>
+                    <th scope="col">Basis / coverage</th>
+                    <th scope="col">Link</th>
                 </tr>
             </thead>
             <tbody>
@@ -190,11 +221,12 @@
         <summary><h2 id="ecp">Effective Core Potentials (ECP)</h2></summary>
         <div class="table-wrap">
         <table>
+            <caption class="sr-only">References for effective core potential parameters and algorithms.</caption>
             <thead>
                 <tr>
-                    <th>Source</th>
-                    <th>Use</th>
-                    <th>Link</th>
+                    <th scope="col">Source</th>
+                    <th scope="col">Use</th>
+                    <th scope="col">Link</th>
                 </tr>
             </thead>
             <tbody>
@@ -227,11 +259,12 @@
         <summary><h2 id="molecular-integrals">Molecular integrals (algorithms)</h2></summary>
         <div class="table-wrap">
         <table>
+            <caption class="sr-only">References for molecular integral algorithms (Obara–Saika, McMurchie–Davidson, Schwarz screening).</caption>
             <thead>
                 <tr>
-                    <th>Source</th>
-                    <th>Use</th>
-                    <th>Link</th>
+                    <th scope="col">Source</th>
+                    <th scope="col">Use</th>
+                    <th scope="col">Link</th>
                 </tr>
             </thead>
             <tbody>
@@ -274,11 +307,12 @@
         <summary><h2 id="mathematics">Mathematics (special functions, quadrature)</h2></summary>
         <div class="table-wrap">
         <table>
+            <caption class="sr-only">References for special functions and numerical quadrature used in RustQuantum.</caption>
             <thead>
                 <tr>
-                    <th>Source</th>
-                    <th>Use</th>
-                    <th>Link</th>
+                    <th scope="col">Source</th>
+                    <th scope="col">Use</th>
+                    <th scope="col">Link</th>
                 </tr>
             </thead>
             <tbody>
@@ -344,7 +378,7 @@
     </main>
 
     <footer>
-        © 2026 Ignacio Lopez Rodriguez · RustQuantum · Personal learning project · <a href="contact.html">Contact</a> · <a href="sources.html">Sources</a> · <a href="legal/privacy.html">Privacy</a> · <a href="legal/terms.html">Terms</a> · <a href="legal/license.html">License</a> · <a href="legal/third-party.html">Credits</a> · <a href="legal/cookies.html">Cookies</a>
+        © 2026 Ignacio López Rodríguez · RustQuantum · Personal learning project · <a href="contact.html">Contact</a> · <a href="sources.html">Sources</a> · <a href="legal/privacy.html">Privacy</a> · <a href="legal/terms.html">Terms</a> · <a href="legal/license.html">License</a> · <a href="legal/third-party.html">Credits</a> · <a href="legal/cookies.html">Cookies</a>
     </footer>
 </body>
 </html>

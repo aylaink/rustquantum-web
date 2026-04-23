@@ -26,6 +26,35 @@
     <script type="module" src="assets/js/analytics.js"></script>
     <script type="module" src="assets/js/nav-dropdown.js"></script>
     <script type="module" src="assets/js/table-fit.js"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://www.rustquantum.com/#website",
+          "url": "https://www.rustquantum.com/",
+          "name": "RustQuantum",
+          "description": "Molecular quantum simulator written in Rust.",
+          "publisher": {"@id": "https://www.rustquantum.com/#person"},
+          "inLanguage": "en"
+        },
+        {
+          "@type": "Person",
+          "@id": "https://www.rustquantum.com/#person",
+          "name": "Ignacio López Rodríguez",
+          "url": "https://www.rustquantum.com/contact.html"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.rustquantum.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Molecule", "item": "https://www.rustquantum.com/molecule.html"}
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
 <body class="pipeline">
     <a class="skip-link" href="#main">Skip to content</a>
@@ -78,14 +107,15 @@
 
         <div class="table-wrap">
         <table>
+            <caption class="sr-only">Electron counts per molecule, compared against PySCF.</caption>
             <thead>
                 <tr>
-                    <th>Molecule</th>
-                    <th>Charge</th>
-                    <th>RQ [e⁻]</th>
-                    <th>PySCF [e⁻]</th>
-                    <th>Diff</th>
-                    <th>Status</th>
+                    <th scope="col">Molecule</th>
+                    <th scope="col">Charge</th>
+                    <th scope="col">RQ [e⁻]</th>
+                    <th scope="col">PySCF [e⁻]</th>
+                    <th scope="col">Diff</th>
+                    <th scope="col">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -105,14 +135,15 @@
         <h3>H₂</h3>
         <div class="table-wrap">
         <table>
+            <caption class="sr-only">H₂ atomic coordinates in Bohr, compared against PySCF.</caption>
             <thead>
                 <tr>
-                    <th>Atom</th>
-                    <th>Coord</th>
-                    <th>RQ [Bohr]</th>
-                    <th>PySCF [Bohr]</th>
-                    <th>Diff</th>
-                    <th>Status</th>
+                    <th scope="col">Atom</th>
+                    <th scope="col">Coord</th>
+                    <th scope="col">RQ [Bohr]</th>
+                    <th scope="col">PySCF [Bohr]</th>
+                    <th scope="col">Diff</th>
+                    <th scope="col">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -129,14 +160,15 @@
         <h3>He</h3>
         <div class="table-wrap">
         <table>
+            <caption class="sr-only">He atomic coordinates in Bohr, compared against PySCF.</caption>
             <thead>
                 <tr>
-                    <th>Atom</th>
-                    <th>Coord</th>
-                    <th>RQ [Bohr]</th>
-                    <th>PySCF [Bohr]</th>
-                    <th>Diff</th>
-                    <th>Status</th>
+                    <th scope="col">Atom</th>
+                    <th scope="col">Coord</th>
+                    <th scope="col">RQ [Bohr]</th>
+                    <th scope="col">PySCF [Bohr]</th>
+                    <th scope="col">Diff</th>
+                    <th scope="col">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -150,14 +182,15 @@
         <h3>LiH</h3>
         <div class="table-wrap">
         <table>
+            <caption class="sr-only">LiH atomic coordinates in Bohr, compared against PySCF.</caption>
             <thead>
                 <tr>
-                    <th>Atom</th>
-                    <th>Coord</th>
-                    <th>RQ [Bohr]</th>
-                    <th>PySCF [Bohr]</th>
-                    <th>Diff</th>
-                    <th>Status</th>
+                    <th scope="col">Atom</th>
+                    <th scope="col">Coord</th>
+                    <th scope="col">RQ [Bohr]</th>
+                    <th scope="col">PySCF [Bohr]</th>
+                    <th scope="col">Diff</th>
+                    <th scope="col">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -174,14 +207,15 @@
         <h3>H₂O</h3>
         <div class="table-wrap">
         <table>
+            <caption class="sr-only">H₂O atomic coordinates in Bohr, compared against PySCF.</caption>
             <thead>
                 <tr>
-                    <th>Atom</th>
-                    <th>Coord</th>
-                    <th>RQ [Bohr]</th>
-                    <th>PySCF [Bohr]</th>
-                    <th>Diff</th>
-                    <th>Status</th>
+                    <th scope="col">Atom</th>
+                    <th scope="col">Coord</th>
+                    <th scope="col">RQ [Bohr]</th>
+                    <th scope="col">PySCF [Bohr]</th>
+                    <th scope="col">Diff</th>
+                    <th scope="col">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -206,15 +240,16 @@
 
         <div class="table-wrap">
         <table>
+            <caption class="sr-only">Nuclear repulsion energy per molecule in Hartree, compared against PySCF.</caption>
             <thead>
                 <tr>
-                    <th>Molecule</th>
-                    <th>Charge</th>
-                    <th>Spin</th>
-                    <th>RQ [Ha]</th>
-                    <th>PySCF [Ha]</th>
-                    <th>Diff</th>
-                    <th>Status</th>
+                    <th scope="col">Molecule</th>
+                    <th scope="col">Charge</th>
+                    <th scope="col">Spin</th>
+                    <th scope="col">RQ [Ha]</th>
+                    <th scope="col">PySCF [Ha]</th>
+                    <th scope="col">Diff</th>
+                    <th scope="col">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -238,7 +273,7 @@
     </main>
 
     <footer>
-        © 2026 Ignacio Lopez Rodriguez · RustQuantum · Personal learning project · <a href="contact.html">Contact</a> · <a href="sources.html">Sources</a> · <a href="legal/privacy.html">Privacy</a> · <a href="legal/terms.html">Terms</a> · <a href="legal/license.html">License</a> · <a href="legal/third-party.html">Credits</a> · <a href="legal/cookies.html">Cookies</a>
+        © 2026 Ignacio López Rodríguez · RustQuantum · Personal learning project · <a href="contact.html">Contact</a> · <a href="sources.html">Sources</a> · <a href="legal/privacy.html">Privacy</a> · <a href="legal/terms.html">Terms</a> · <a href="legal/license.html">License</a> · <a href="legal/third-party.html">Credits</a> · <a href="legal/cookies.html">Cookies</a>
     </footer>
 </body>
 </html>
