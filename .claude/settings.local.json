@@ -2,7 +2,10 @@
   "permissions": {
     "allow": [
       "Read(//c/Users/aylai/Documents/Proyectos/RustQuantum2/src/math/**)",
-      "Read(//c/Users/aylai/Documents/Proyectos/RustQuantum/src/math/**)"
+      "Read(//c/Users/aylai/Documents/Proyectos/RustQuantum/src/math/**)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)"
     ]
   }
 }
