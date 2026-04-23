@@ -27,7 +27,7 @@
     <script type="module" src="assets/js/nav-dropdown.js"></script>
     <script type="module" src="assets/js/table-fit.js"></script>
 </head>
-<body>
+<body class="pipeline">
     <a class="skip-link" href="#main">Skip to content</a>
     <header>
         <div class="header-inner">
@@ -48,7 +48,7 @@
                         <li><a href="hamiltonian.html">Hamiltonian</a></li>
                         <li><a href="fermion.html">Fermion</a></li>
                         <li><a href="circuit.html">Circuit</a></li>
-                        <li><a href="vqe.html" class="active" aria-current="page">VQE</a></li>
+                        <li><a href="vqe.html" class="active" aria-current="page">Circuit Compression</a></li>
                         </ul>
                         </details>
                     </li>
@@ -58,6 +58,7 @@
                         <ul>
                         <li><a href="benchmarks/hardware.html">Hardware</a></li>
                         <li><a href="benchmarks/fci.html">FCI</a></li>
+                        <li><a href="benchmarks/vqe.html">Circuit Compression</a></li>
                         </ul>
                         </details>
                     </li>
@@ -69,7 +70,7 @@
 
     <main id="main">
         <h1>Variational Quantum Eigensolver</h1>
-        <p class="lead">RustQuantum runs VQE with Qubit-ADAPT and L-BFGS.</p>
+        <p class="lead">RustQuantum compresses VQE circuits.</p>
 
         <details class="collapse">
         <summary><h2 id="ansatz">Ansatz</h2></summary>
@@ -85,10 +86,6 @@
 
         <details class="collapse">
         <summary><h2 id="optimizer">Optimizer</h2></summary>
-        </details>
-
-        <details class="collapse">
-        <summary><h2 id="polish">Polish</h2></summary>
         </details>
 
         <nav class="prev-next" aria-label="Pipeline navigation">
