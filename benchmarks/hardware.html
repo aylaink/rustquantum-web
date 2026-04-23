@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hardware — RustQuantum</title>
-    <meta name="description" content="Hardware benchmarks for RustQuantum.">
+    <title>Environment — RustQuantum</title>
+    <meta name="description" content="Environment benchmarks for RustQuantum.">
     <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
     <link rel="canonical" href="https://www.rustquantum.com/benchmarks/hardware.html">
-    <meta property="og:title" content="Hardware — RustQuantum">
-    <meta property="og:description" content="Hardware benchmarks for RustQuantum.">
+    <meta property="og:title" content="Environment — RustQuantum">
+    <meta property="og:description" content="Environment benchmarks for RustQuantum.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.rustquantum.com/benchmarks/hardware.html">
     <meta property="og:site_name" content="RustQuantum">
@@ -56,7 +56,7 @@
                         <details class="nav-dropdown">
                         <summary>Benchmarks</summary>
                         <ul>
-                        <li><a href="hardware.html" class="active" aria-current="page">Hardware</a></li>
+                        <li><a href="hardware.html" class="active" aria-current="page">Environment</a></li>
                         <li><a href="fci.html">FCI</a></li>
                         <li><a href="vqe.html">Circuit Compression</a></li>
                         </ul>
@@ -68,11 +68,18 @@
     </header>
 
     <main id="main">
-        <h1>Hardware</h1>
+        <h1>Environment</h1>
         <p class="lead">Reference machine used for all RustQuantum benchmarks.</p>
+
+        <details class="collapse">
+        <summary><h2 id="hardware">Hardware</h2></summary>
 
         <div class="table-wrap">
         <table>
+            <colgroup>
+                <col style="width: 30%">
+                <col>
+            </colgroup>
             <thead>
                 <tr>
                     <th>Component</th>
@@ -80,15 +87,39 @@
                 </tr>
             </thead>
             <tbody>
-                <tr><td><strong>CPU</strong></td>         <td class="mono">AMD Ryzen 9 9955HX3D 16-Core Processor</td></tr>
+                <tr><td><strong>CPU</strong></td>             <td class="mono">AMD Ryzen 9 9955HX3D 16-Core Processor</td></tr>
                 <tr><td><strong>Cores / Threads</strong></td> <td class="mono">16 physical / 32 SMT</td></tr>
-                <tr><td><strong>GPU</strong></td>         <td class="mono">NVIDIA GeForce RTX 5090 Laptop GPU</td></tr>
-                <tr><td><strong>OS / Arch</strong></td>   <td class="mono">Windows 11 / x86_64</td></tr>
-                <tr><td><strong>Build</strong></td>       <td class="mono">release</td></tr>
-                <tr><td><strong>Floating point</strong></td> <td class="mono">f64 end-to-end</td></tr>
+                <tr><td><strong>GPU</strong></td>             <td class="mono">NVIDIA GeForce RTX 5090 Laptop GPU</td></tr>
+                <tr><td><strong>RAM</strong></td>             <td class="mono">64 GB DDR5-5600 SODIMM</td></tr>
             </tbody>
         </table>
         </div>
+        </details>
+
+        <details class="collapse">
+        <summary><h2 id="software">Software</h2></summary>
+
+        <div class="table-wrap">
+        <table>
+            <colgroup>
+                <col style="width: 30%">
+                <col>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>Component</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>OS / Arch</strong></td>       <td class="mono">Windows 11 / x86_64</td></tr>
+                <tr><td><strong>Language</strong></td>        <td class="mono">Rust</td></tr>
+                <tr><td><strong>Kernel Language</strong></td> <td class="mono">C++</td></tr>
+                <tr><td><strong>Floating point</strong></td>  <td class="mono">f64 end-to-end</td></tr>
+            </tbody>
+        </table>
+        </div>
+        </details>
 
         <nav class="prev-next" aria-label="Benchmarks navigation">
             <a href="fci.html" class="next">

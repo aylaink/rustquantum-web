@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/aylai/Documents/Proyectos/RustQuantum2/src/math/**)",
+      "Read(//c/Users/aylai/Documents/Proyectos/RustQuantum/src/math/**)"
+    ]
+  }
+}
