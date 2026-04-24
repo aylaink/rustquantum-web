@@ -1038,6 +1038,63 @@ td strong {
     color: var(--text);
 }
 
+/* ---- Pipeline diagram (pipeline.html) ---- */
+.pipeline-diagram {
+    display: block;
+    width: 100%;
+    max-width: 640px;
+    margin: 2rem auto;
+    height: auto;
+}
+.pipeline-diagram a {
+    text-decoration: none;
+}
+.pipeline-diagram .stage-box {
+    fill: var(--bg-alt);
+    stroke: var(--border);
+    stroke-width: 1.5;
+    transition: stroke 0.2s ease, fill 0.2s ease;
+}
+.pipeline-diagram a:hover .stage-box,
+.pipeline-diagram a:focus-visible .stage-box {
+    stroke: var(--accent);
+    fill: var(--bg);
+}
+.pipeline-diagram .stage-text {
+    fill: var(--text);
+    font-family: var(--mono);
+    font-size: 14px;
+    text-anchor: middle;
+    dominant-baseline: middle;
+    pointer-events: none;
+}
+.pipeline-diagram a:hover .stage-text,
+.pipeline-diagram a:focus-visible .stage-text {
+    fill: var(--accent);
+}
+.pipeline-diagram .arrow {
+    stroke: var(--accent);
+    stroke-width: 1.5;
+    fill: none;
+}
+.pipeline-diagram .arrow-head {
+    fill: var(--accent);
+}
+
+/* ---- Social link with icon ---- */
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+}
+
+.social-icon {
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+    flex-shrink: 0;
+}
+
 /* ---- Footer ---- */
 footer {
     position: fixed;

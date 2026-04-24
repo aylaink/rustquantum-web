@@ -10,11 +10,31 @@
 # Safe to remove once nothing external links to them.
 /pages/basis-results.html   /basis.html              301
 /pages/scf-results.html     /scf.html                301
-/pages/privacy.html         /legal/privacy.html      301
-/pages/terms.html           /legal/terms.html        301
-/pages/cookies.html         /legal/cookies.html      301
+/pages/privacy.html         /legal.html#privacy      301
+/pages/terms.html           /legal.html#terms        301
+/pages/cookies.html         /legal.html#cookies      301
 /pages/contact.html         /contact.html            301
 
 # Reports removed for now — any stale link redirects to the related stage.
 /reports/basis-h2.html      /basis.html              301
 /reports/scf-h2.html        /scf.html                301
+
+# Legal pages unified into /legal.html — keep anchor-preserving redirects.
+/legal/privacy.html         /legal.html#privacy      301
+/legal/cookies.html         /legal.html#cookies      301
+/legal/terms.html           /legal.html#terms        301
+/legal/license.html         /legal.html#license      301
+/legal/third-party.html     /legal.html#credits      301
+
+# Pipeline pages unified into /pipeline.html — keep anchor-preserving redirects.
+/molecule.html              /pipeline.html#molecule         301
+/basis.html                 /pipeline.html#basis            301
+/integrals.html             /pipeline.html#integrals        301
+/scf.html                   /pipeline.html#scf              301
+/hamiltonian.html           /pipeline.html#hamiltonian      301
+/fermion.html               /pipeline.html#fermion          301
+/circuit.html               /pipeline.html#circuit          301
+/vqe.html                   /pipeline.html#vqe              301
+/fci.html                   /pipeline.html#scf              301
+/constants.html             /pipeline.html                  301
+/math.html                  /pipeline.html                  301

@@ -2,62 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://www.rustquantum.com/</loc>
-        <lastmod>2026-04-23</lastmod>
+        <lastmod>2026-04-24</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://www.rustquantum.com/constants.html</loc>
-        <lastmod>2026-04-23</lastmod>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://www.rustquantum.com/molecule.html</loc>
-        <lastmod>2026-04-23</lastmod>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://www.rustquantum.com/math.html</loc>
-        <lastmod>2026-04-23</lastmod>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://www.rustquantum.com/basis.html</loc>
-        <lastmod>2026-04-23</lastmod>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://www.rustquantum.com/integrals.html</loc>
-        <lastmod>2026-04-23</lastmod>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://www.rustquantum.com/scf.html</loc>
-        <lastmod>2026-04-23</lastmod>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://www.rustquantum.com/hamiltonian.html</loc>
-        <lastmod>2026-04-23</lastmod>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://www.rustquantum.com/fermion.html</loc>
-        <lastmod>2026-04-23</lastmod>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://www.rustquantum.com/circuit.html</loc>
-        <lastmod>2026-04-23</lastmod>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://www.rustquantum.com/vqe.html</loc>
-        <lastmod>2026-04-23</lastmod>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://www.rustquantum.com/fci.html</loc>
-        <lastmod>2026-04-23</lastmod>
+        <loc>https://www.rustquantum.com/pipeline.html</loc>
+        <lastmod>2026-04-24</lastmod>
         <priority>0.9</priority>
     </url>
     <url>
@@ -81,28 +31,8 @@
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://www.rustquantum.com/legal/privacy.html</loc>
-        <lastmod>2026-04-23</lastmod>
-        <priority>0.3</priority>
-    </url>
-    <url>
-        <loc>https://www.rustquantum.com/legal/terms.html</loc>
-        <lastmod>2026-04-23</lastmod>
-        <priority>0.3</priority>
-    </url>
-    <url>
-        <loc>https://www.rustquantum.com/legal/license.html</loc>
-        <lastmod>2026-04-23</lastmod>
-        <priority>0.3</priority>
-    </url>
-    <url>
-        <loc>https://www.rustquantum.com/legal/third-party.html</loc>
-        <lastmod>2026-04-23</lastmod>
-        <priority>0.3</priority>
-    </url>
-    <url>
-        <loc>https://www.rustquantum.com/legal/cookies.html</loc>
-        <lastmod>2026-04-23</lastmod>
+        <loc>https://www.rustquantum.com/legal.html</loc>
+        <lastmod>2026-04-24</lastmod>
         <priority>0.3</priority>
     </url>
 </urlset>

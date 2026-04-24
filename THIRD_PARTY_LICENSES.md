@@ -25,7 +25,7 @@ Google Fonts.
 ## Bundled JavaScript and CSS libraries
 
 Self-hosted under `assets/katex/`. Loaded only on pages that render
-math (`math.html`, `integrals.html`).
+math (`pipeline.html`).
 
 | Library        | Version | License (SPDX) | Source                               |
 |:---------------|:--------|:---------------|:-------------------------------------|
@@ -46,7 +46,7 @@ the provider's own terms, not by a conventional open-source license.
 
 ### Basis Set Exchange (CC-BY-4.0)
 
-The numerical basis-set values shown in `basis.html` validation
+The numerical basis-set values shown in the `pipeline.html#basis` validation
 tables (STO-3G, STO-6G, 6-31G, 6-31G(d), 6-311G, def2-SVP exponents
 and contraction coefficients) originate from the Basis Set Exchange
 and are therefore a **redistribution of CC-BY-4.0 data**. Attribution

@@ -78,7 +78,7 @@ Site-wide:
 ### 1.4. CROSS-PAGE CONSISTENCY
 
 - The `<header>`, `<nav>`, and `<footer>` are **structurally identical** across pages: same element tree, same classes, same link text, same order. Only two kinds of differences are allowed:
-  - Relative paths — a link from `legal/privacy.html` to `contact.html` must use `../contact.html`; from `index.html`, just `contact.html`.
+  - Relative paths — a link from `benchmarks/vqe.html` to `contact.html` must use `../contact.html`; from a root page like `index.html` or `legal.html`, just `contact.html`.
   - The `class="active"` (+ `aria-current="page"`) marker on the link that points to the current page, if the current page is present in the nav.
 - The nav order is: `Home · Pipeline · Molecule · Constants · Basis · Math · Integrals · Core Treatment · SCF`. `Pipeline` is the hub overview page that links to each of the 7 stages; the 7 stage links remain in the top nav for direct access. Sub-pages (reports, legal, contact) show the same 9 nav links with no `.active` marker.
 - Any structural change (new page, renamed link, moved section) is applied to every page in the same commit.
@@ -222,7 +222,7 @@ Rules:
 ### 4.3. NOTATION
 
 - Unicode inline for simple formulas and symbols: `α`, `Ψ`, `⟨ϕᵢ|ĥ|ϕⱼ⟩`, `ℏ`, `10⁻¹²`, `≈`, `≤`.
-- KaTeX is wired on `math.html` and `integrals.html` via `$ … $` (inline) and `$$ … $$` (display) delimiters. Load it ONLY on pages that use it. Don't reach for KaTeX when Unicode is enough — reserve it for multi-line derivations, integrals with explicit bounds, fractions, matrices.
+- KaTeX is wired on `pipeline.html` via `$ … $` (inline) and `$$ … $$` (display) delimiters. Load it ONLY on pages that use it. Don't reach for KaTeX when Unicode is enough — reserve it for multi-line derivations, integrals with explicit bounds, fractions, matrices.
 - Units in roman, not italic: `1.6 mHa`, `0.529 Å`.
 - Chemical formulas use `<sub>` / `<sup>` (`H<sub>2</sub>O`), never hardcoded Unicode subscripts for digits.
 
@@ -251,7 +251,7 @@ Every page must score ≥ 95 on all four axes (Performance, Accessibility, Best 
 
 - The site is HTML + CSS only by default. No JS required for navigation or content.
 - If JS is ever added, it must: be a single small vanilla module loaded as `<script type="module" src="…">` (modules are deferred by default — never add an explicit `defer` attribute, the validator flags it as invalid), degrade gracefully without JS, and not pull in a framework.
-- No third-party analytics that set cookies without consent. If analytics are added, choose a cookieless provider (e.g. Plausible) and document it in `pages/privacy.html` and `pages/cookies.html`.
+- No third-party analytics that set cookies without consent. If analytics are added, choose a cookieless provider (e.g. Plausible) and document it in `legal.html#privacy` and `legal.html#cookies`.
 
 ──────────────────────────────────────────────────────────────────
 
@@ -280,28 +280,15 @@ Every page must score ≥ 95 on all four axes (Performance, Accessibility, Best 
 
 ```
 RustQuantumWeb/
-├── index.html               ← landing (hero + about + CTA to pipeline)
-├── pipeline.html            ← overview: step boxes + grid of 7 stage cards
-├── molecule.html            ┐
-├── constants.html           │
-├── basis.html               │
-├── math.html                │  Pipeline stages (root, short URLs)
-├── integrals.html           │  Order matches the validation flow.
-├── scf.html                 │
-├── hamiltonian.html         │
-├── fermion.html             │
-├── circuit.html             │
-├── vqe.html                 │
-├── fci.html                 ┘
+├── index.html               ← landing (hero + about + news)
+├── pipeline.html            ← single-page pipeline overview with five phases (molecule → hardware)
 ├── benchmarks/              ← performance measurements (dropdown sibling of pipeline)
 │   ├── hardware.html
-│   └── fci.html
-├── contact.html             ← cross-site, lives at root
-├── reports/                 ← validation reports (one file per experiment) — empty for now
-├── legal/                   ← legal / policy pages
-│   ├── privacy.html
-│   ├── terms.html
-│   └── cookies.html
+│   └── vqe.html
+├── contact.html             ← contact form
+├── sources.html             ← scientific references
+├── legal.html               ← unified legal page (#privacy, #cookies, #terms, #license, #credits)
+├── 404.html                 ← fallback
 ├── assets/                  ← all shared binary / static assets
 │   ├── style.css
 │   ├── favicon.svg
@@ -324,8 +311,7 @@ RustQuantumWeb/
 
 - **Subfolders are semantic**, not by type. `reports/`, `legal/`, `assets/` say
   *what* the contents are. Forbidden: generic `pages/`, `html/`, `docs/`.
-- **Pipeline stage pages live at the root** with single-word filenames that
-  match the corresponding Rust module (`basis.html` ↔ `src/basis/`).
+- **Pipeline stages live as anchor sections inside `pipeline.html`** (e.g. `pipeline.html#basis`). The anchor IDs match the corresponding Rust module names (`#basis` ↔ `src/basis/`).
 - **Report files are qualified by the system studied**: `reports/basis-h2.html`,
   `reports/scf-h2.html` — never `reports/basis-results.html`. When a second
   molecule is added, the filename disambiguates on its own (`basis-water.html`).
