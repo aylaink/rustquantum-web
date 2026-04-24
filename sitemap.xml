@@ -66,13 +66,8 @@
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.rustquantum.com/benchmarks/fci.html</loc>
-        <lastmod>2026-04-23</lastmod>
-        <priority>0.7</priority>
-    </url>
-    <url>
         <loc>https://www.rustquantum.com/benchmarks/vqe.html</loc>
-        <lastmod>2026-04-23</lastmod>
+        <lastmod>2026-04-24</lastmod>
         <priority>0.7</priority>
     </url>
     <url>
