@@ -60,7 +60,7 @@
     }
     </script>
 </head>
-<body>
+<body class="pipeline">
     <a class="skip-link" href="#main">Skip to content</a>
     <header>
         <div class="header-inner">
@@ -84,72 +84,33 @@
 
     <main id="main">
         <h1>Pipeline</h1>
-        <p class="lead">From molecule definition to quantum hardware execution, grouped in five phases.</p>
+        <p class="lead">From molecule definition to quantum hardware execution, grouped in six phases.</p>
 
-        <svg class="pipeline-diagram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 460" role="img" aria-labelledby="pipeline-diagram-title">
-            <title id="pipeline-diagram-title">Pipeline flow: Molecule and Basis feed into Integrals, SCF and Hamiltonian, then Fermion mapping and Compression, then Circuit ansatz and VQE loop, then Transpilation and Hardware.</title>
+        <svg class="pipeline-diagram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 470" role="img" aria-labelledby="pipeline-diagram-title">
+            <title id="pipeline-diagram-title">Pipeline phases: Classical problem definition → Classical preprocessing → Quantization → Variational construction and optimization → Transpilation → Real quantum hardware.</title>
 
-            <a href="#molecule"><rect class="stage-box" x="148" y="10" width="160" height="50" rx="6"/><text class="stage-text" x="228" y="35">Molecule</text></a>
-            <a href="#basis"><rect class="stage-box" x="332" y="10" width="160" height="50" rx="6"/><text class="stage-text" x="412" y="35">Basis</text></a>
-            <line class="arrow" x1="320" y1="60" x2="320" y2="95"/>
-            <polygon class="arrow-head" points="314,93 320,105 326,93"/>
+            <rect class="stage-box" x="120" y="10" width="400" height="50" rx="6"/><text class="stage-text" x="320" y="35">Classical problem definition</text>
+            <line class="arrow" x1="320" y1="60" x2="320" y2="75"/>
+            <polygon class="arrow-head" points="314,73 320,85 326,73"/>
 
-            <a href="#integrals"><rect class="stage-box" x="56" y="105" width="160" height="50" rx="6"/><text class="stage-text" x="136" y="130">Integrals</text></a>
-            <a href="#scf"><rect class="stage-box" x="240" y="105" width="160" height="50" rx="6"/><text class="stage-text" x="320" y="130">SCF</text></a>
-            <a href="#hamiltonian"><rect class="stage-box" x="424" y="105" width="160" height="50" rx="6"/><text class="stage-text" x="504" y="130">Hamiltonian</text></a>
-            <line class="arrow" x1="320" y1="155" x2="320" y2="190"/>
-            <polygon class="arrow-head" points="314,188 320,200 326,188"/>
+            <rect class="stage-box" x="120" y="85" width="400" height="50" rx="6"/><text class="stage-text" x="320" y="110">Classical preprocessing</text>
+            <line class="arrow" x1="320" y1="135" x2="320" y2="150"/>
+            <polygon class="arrow-head" points="314,148 320,160 326,148"/>
 
-            <a href="#fermion"><rect class="stage-box" x="148" y="200" width="160" height="50" rx="6"/><text class="stage-text" x="228" y="225">Fermion mapping</text></a>
-            <a href="#compression"><rect class="stage-box" x="332" y="200" width="160" height="50" rx="6"/><text class="stage-text" x="412" y="225">Compression</text></a>
-            <line class="arrow" x1="320" y1="250" x2="320" y2="285"/>
-            <polygon class="arrow-head" points="314,283 320,295 326,283"/>
+            <rect class="stage-box" x="120" y="160" width="400" height="50" rx="6"/><text class="stage-text" x="320" y="185">Quantization</text>
+            <line class="arrow" x1="320" y1="210" x2="320" y2="225"/>
+            <polygon class="arrow-head" points="314,223 320,235 326,223"/>
 
-            <a href="#circuit"><rect class="stage-box" x="148" y="295" width="160" height="50" rx="6"/><text class="stage-text" x="228" y="320">Circuit ansatz</text></a>
-            <a href="#vqe"><rect class="stage-box" x="332" y="295" width="160" height="50" rx="6"/><text class="stage-text" x="412" y="320">VQE loop</text></a>
-            <line class="arrow" x1="320" y1="345" x2="320" y2="380"/>
-            <polygon class="arrow-head" points="314,378 320,390 326,378"/>
+            <rect class="stage-box" x="120" y="235" width="400" height="50" rx="6"/><text class="stage-text" x="320" y="260">Variational construction and optimization</text>
+            <line class="arrow" x1="320" y1="285" x2="320" y2="300"/>
+            <polygon class="arrow-head" points="314,298 320,310 326,298"/>
 
-            <a href="#transpilation"><rect class="stage-box" x="148" y="390" width="160" height="50" rx="6"/><text class="stage-text" x="228" y="415">Transpilation</text></a>
-            <a href="#hardware"><rect class="stage-box" x="332" y="390" width="160" height="50" rx="6"/><text class="stage-text" x="412" y="415">Hardware</text></a>
+            <rect class="stage-box" x="120" y="310" width="400" height="50" rx="6"/><text class="stage-text" x="320" y="335">Transpilation</text>
+            <line class="arrow" x1="320" y1="360" x2="320" y2="375"/>
+            <polygon class="arrow-head" points="314,373 320,385 326,373"/>
+
+            <rect class="stage-box" x="120" y="385" width="400" height="50" rx="6"/><text class="stage-text" x="320" y="410">Real quantum hardware</text>
         </svg>
-
-        <h2 id="phase1">Phase 1 — Problem definition</h2>
-        <p>Molecule and basis set. You choose the molecule and the single-particle space in which you represent it. This is pure input; everything downstream depends on these two choices.</p>
-        <h3 id="molecule">Molecule</h3>
-        <p>Atomic coordinates, nuclear charges, overall charge, and spin multiplicity.</p>
-        <h3 id="basis">Basis set</h3>
-        <p>Gaussian-type orbitals (STO-3G, 6-31G, def2-SVP, …) expanding the one-particle Hilbert space.</p>
-
-        <h2 id="phase2">Phase 2 — Classical preprocessing</h2>
-        <p>Integrals, SCF, and Hamiltonian. The trio that produces the molecular Hamiltonian in second quantization. Still classical computational chemistry; the QPU has not entered the scene yet.</p>
-        <h3 id="integrals">Integrals</h3>
-        <p>One-electron overlap, kinetic, and nuclear-attraction integrals plus the two-electron repulsion tensor (ERI) over the basis.</p>
-        <h3 id="scf">SCF</h3>
-        <p>Hartree–Fock self-consistent field solution for the mean-field reference determinant.</p>
-        <h3 id="hamiltonian">Hamiltonian</h3>
-        <p>Second-quantized molecular Hamiltonian with one- and two-body coefficients <code>h<sub>pq</sub></code> and <code>h<sub>pqrs</sub></code> expressed in the MO basis.</p>
-
-        <h2 id="phase3">Phase 3 — Quantization</h2>
-        <p>Fermion mapping and compression. Here you cross the classical→quantum frontier: you map fermionic operators to qubits and apply symmetry reductions (tapering, frozen core, parity) before building the circuit. Compression belongs here, not at the end, because shrinking the Pauli operator before the ansatz is far cheaper than recompiling afterwards.</p>
-        <h3 id="fermion">Fermion mapping</h3>
-        <p>Jordan–Wigner or Bravyi–Kitaev mapping turns fermionic ladder operators into strings of Pauli operators on qubits.</p>
-        <h3 id="compression">Compression</h3>
-        <p>Z<sub>2</sub> symmetry tapering, frozen-core reduction, and parity-preserving consolidations remove redundant qubits and Pauli terms.</p>
-
-        <h2 id="phase4">Phase 4 — Variational construction and optimization</h2>
-        <p>Circuit ansatz and VQE loop. The parameterized circuit and the classical–quantum optimization loop. It is an inner sub-loop: the classical optimizer calls the quantum circuit many times.</p>
-        <h3 id="circuit">Circuit ansatz</h3>
-        <p>Parameterized quantum circuit (UCCSD, hardware-efficient, ADAPT-VQE) whose expectation value approximates the ground state.</p>
-        <h3 id="vqe">VQE loop</h3>
-        <p>Classical optimizer (COBYLA, L-BFGS-B, SPSA) iterates on the circuit parameters using the measured expectation value of the Hamiltonian as the cost function.</p>
-
-        <h2 id="phase5">Phase 5 — Execution</h2>
-        <p>Transpilation and hardware. Take the abstract circuit down to the physical backend and run it with error mitigation.</p>
-        <h3 id="transpilation">Transpilation</h3>
-        <p>Rewrite the circuit into the target backend's native gate set and couple it to its qubit connectivity graph (heavy-hex, all-to-all, …).</p>
-        <h3 id="hardware">Hardware</h3>
-        <p>Execution on a QPU (IBM Q, IonQ, Quantinuum, …) with shot sampling and error mitigation (zero-noise extrapolation, readout correction, dynamical decoupling).</p>
     </main>
 
     <footer>
