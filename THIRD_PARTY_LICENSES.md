@@ -38,8 +38,7 @@ the provider's own terms, not by a conventional open-source license.
 
 | Component                 | Role                                  | Terms / policy                                     |
 |:--------------------------|:--------------------------------------|:---------------------------------------------------|
-| Google Analytics 4 (gtag) | Cookieless-by-default visitor analytics; consent gated via the banner (`assets/js/analytics.js`) | <https://policies.google.com/technologies/partner-sites> |
-| Google Tag Manager        | Loader for `gtag.js`                  | <https://marketingplatform.google.com/about/analytics/terms/us/> |
+| Cloudflare Web Analytics  | Cookieless, privacy-preserving visitor metrics; beacon injected at the edge via Automatic Setup | <https://www.cloudflare.com/web-analytics-privacy-policy/> |
 | Cloudflare Pages          | Static hosting and CDN                | <https://www.cloudflare.com/website-terms/>        |
 | Cloudflare Workers        | Contact-form backend (`rustquantum-contact.aylaink.workers.dev`, invoked from `assets/js/contact.js`) | <https://www.cloudflare.com/website-terms/> |
 
