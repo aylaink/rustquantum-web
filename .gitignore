@@ -15,3 +15,8 @@ desktop.ini
 # Wrangler / Cloudflare Pages local cache
 .wrangler/
 .dev.vars
+
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
